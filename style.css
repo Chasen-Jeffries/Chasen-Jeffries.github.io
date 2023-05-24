@@ -70,13 +70,6 @@ p + p {
   text-align: justify;
 }
 
-/* indent paragraphs */
-
-.apa-reference {
-    padding-left: 36px
-    text-indent: -36px
-}
-
 /**
  * Quotes & Blockquotes
  */
