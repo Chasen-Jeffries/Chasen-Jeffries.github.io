@@ -16,7 +16,7 @@ Check out my [updated template](https://github.com/Chasen-Jeffries/Website_Templ
 
 ## ⭐ Features
 
-- **👤 About Me Page**: Get to know me, my background, and what drives me. This page offers a personal look into my journey and interests.
+- **💡 About Me Page**: Get to know me, my background, and what drives me. This page offers a personal look into my journey and interests.
 - **📚 Research Page**: Dive into my academic work. Here you'll find my research papers, publications, and ongoing projects.
 - **🖼️ Portfolio Showcase**: A dedicated section to display my projects and any interesting work I've been involved in.
 - **📊 Resources for Data Science Learning**: A curated collection of resources I've found valuable in my journey. Whether you're starting out or looking to deepen your knowledge, this page offers tools, tutorials, and insights into data science.
