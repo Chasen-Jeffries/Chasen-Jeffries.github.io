@@ -113,6 +113,17 @@ img {
   margin-right: 20px; /* Adds space between "Work" and "About" links */
 }
 
+/* Main Menu Links for Home Page */
+body.home-page .main-menu li a {
+  color: #fff; /* White text for better contrast on the background */
+}
+
+body.home-page .main-menu li a:hover, 
+body.home-page .main-menu li a:focus {
+  text-decoration: underline;
+  color: #ddd; /* Slightly lighter color on hover/focus */
+}
+
 /***********************
 FOR THE HOME PAGE SETUP
 ***********************/
@@ -134,33 +145,6 @@ FOR THE HOME PAGE SETUP
   box-sizing: border-box; /* Ensures borders and padding are included in width/height */
   margin-left: calc(-100px); /* Removes left padding by using calc() */
   margin-right: calc(-100px); /* Removes right padding by using calc() */
-}
-
-/* Main Menu Overlap */
-.main-menu {
-  position: fixed; /* Ensures the menu stays at the top */
-  top: 0;
-  left: 0;
-  width: 100%; /* Full width */
-  background-color: transparent; /* Transparent to show the background image */
-  border-bottom: 2px solid #000; /* Keeps the bottom border */
-  z-index: 3; /* Ensures it appears above the background */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  box-sizing: border-box; /* Ensures padding is included in width/height */
-}
-
-/* Main Menu Links for Home Page */
-#home + .main-menu li a {
-  color: #fff; /* White text for better contrast on the background */
-}
-
-#home + .main-menu li a:hover,
-#home + .main-menu li a:focus {
-  text-decoration: underline;
-  color: #ddd; /* Slightly lighter color on hover/focus */
 }
 
 /* Content Below Background Image */
