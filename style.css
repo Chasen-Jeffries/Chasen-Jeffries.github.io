@@ -103,9 +103,8 @@ img {
   color: #000000; /* Ensures text color is visible against the background */
   font-weight: bold; /* Makes text bold */
   font-size: 1.2rem; /* Increases the font size */
-  padding: 10px 20px; /* Optional: Adds padding around the links for easier clicking */
+  padding: 10px 10px; /* Optional: Adds padding around the links for easier clicking */
   transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
-  
   display: flex;
   align-items: center;
 }
