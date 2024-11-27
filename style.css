@@ -172,8 +172,8 @@ FOR THE HOME PAGE SETUP
 #content {
   margin-top: 100vh; /* Pushes content below the fullscreen background image */
   background-color: #f2f2f2; /* Sets the background color for the entire section */
-  padding: 40px 0; /* Adds vertical padding */
-  width: 100vw; /* Ensures the background spans the full width of the viewport */
+  width: calc(100vw + 100px); /* Extends the section width */
+  margin-left: calc(-100px); /* Counteracts the body's left padding */
   box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
