@@ -134,89 +134,80 @@ img {
 FOR THE HOME PAGE SETUP 
 */
 
-/* Full-Screen BioPhoto Section */
-.bio-photo-section {
-  position: relative;
+/* Fullscreen Background */
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh; /* Full viewport height */
-  background: url('background-image-url.jpg') center center / cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensures the background stays behind content */
 }
 
-.bio-photo img {
-  max-width: 200px;
-  height: auto;
-  border-radius: 50%; /* Circular photo */
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the photo */
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the screen without distortion */
+  opacity: 0.4; /* Makes the background semi-transparent */
 }
 
-.bio-quote p {
-  font-size: 1.5rem; /* Larger font for the quote */
-  font-weight: bold;
-  color: #fff; /* White text for better contrast */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow for readability */
-  margin: 0;
-  padding: 20px;
+/* Main Content Container */
+#home .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative; /* Ensures content stays above the background */
+  z-index: 1;
 }
 
-/* Intro Section */
+/* Intro Section (Picture and Bio) */
 .intro {
   display: flex;
   flex-wrap: wrap; /* Stacks elements on smaller screens */
   align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px; /* Spacing around the section */
+  margin-bottom: 40px;
 }
 
 .intro-image {
   flex: 1;
-  max-width: 300px;
+  max-width: 300px; /* Restricts the image size */
   margin-right: 20px;
 }
 
-#hp {
+.profile-image {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Rounded corners for your professional photo */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for a polished look */
+  border-radius: 10px; /* Adds rounded corners */
 }
 
 .intro-bio {
   flex: 2;
   font-size: 1.2rem;
-  color: #333;
+  line-height: 1.6;
+  color: #000; /* Ensures text is readable over the semi-transparent background */
 }
 
 /* Portfolio Section */
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
+  justify-content: space-between; /* Creates equal spacing between items */
+  gap: 20px; /* Adds spacing between items */
 }
 
 .portfolio-item {
   flex: 1;
-  min-width: 250px;
-  max-width: 300px;
-  text-align: center;
-  margin: 20px;
+  min-width: 250px; /* Ensures items don't shrink too small */
+  max-width: 300px; /* Restricts maximum width */
+  text-align: center; /* Centers text below the image */
 }
 
 .portfolio-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for a polished look */
 }
 
 .portfolio-item h3 {
