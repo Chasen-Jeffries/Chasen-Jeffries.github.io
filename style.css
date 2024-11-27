@@ -80,7 +80,7 @@ img {
 .main-menu {
   list-style: none;
   margin: 0;
-  padding: 10px 0;  /* Increased vertical padding */
+  padding: 0;  /* Increased vertical padding */
   display: flex;
   justify-content: flex-start;  /* Aligns items to the start */
   align-items: center;
