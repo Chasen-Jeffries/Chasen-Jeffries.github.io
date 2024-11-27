@@ -215,9 +215,9 @@ html:not(:target) #Home {
 }
 
 .intro-image {
-  flex: 1;
-  max-width: 300px; /* Restricts the image size */
-  margin-right: 20px;
+  flex: 1 1 50%; /* Allows the image to take up to 50% of the container width */
+  max-width: 50%; /* Restricts the image to a maximum of 50% of its container's width */
+  padding-right: 20px; /* Adds some padding between the image and the text */
 }
 
 .profile-image {
@@ -228,7 +228,8 @@ html:not(:target) #Home {
 }
 
 .intro-bio {
-  flex: 2;
+  flex: 1 1 50%; /* Allows the text to take up to 50% of the container width */
+  max-width: 50%; /* Restricts the text to a maximum of 50% of its container's width */
   font-size: 1.2rem;
   line-height: 1.6;
   color: #000; /* Black text for contrast */
@@ -274,8 +275,13 @@ html:not(:target) #Home {
     text-align: center;
   }
 
+  .intro-image, .intro-bio {
+    max-width: 100%; /* Makes both the image and text take full width on smaller screens */
+    flex: none; /* Overrides the flex settings used for larger screens */
+  }
+
   .intro-image {
-    margin: 0 0 20px 0;
+    padding-right: 0; /* Removes the padding on smaller screens */
   }
 
   .portfolio {
