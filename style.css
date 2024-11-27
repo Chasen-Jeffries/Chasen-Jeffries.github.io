@@ -77,22 +77,21 @@ img {
 }
 
 /* Setting up the Main Menu. */
+/* Setting up the Main Menu. */
 .main-menu {
   list-style: none;
   margin: 0;
-  padding: 0; /* No padding that could affect alignment */
+  padding: 0;  /* Increased vertical padding */
   display: flex;
-  justify-content: space-between; /* Aligns "Home" to the left, others to the right */
-  align-items: center; /* Centers items vertically */
-  border-bottom: 2px solid #ccc; /* Bottom border */
-  border-top: 2px solid #ccc; /* Top border */
-  background-color: transparent; /* Matches the page background */
-  height: 60px; /* Fixed height for menu container */
-  box-sizing: border-box; /* Ensures padding and borders are included in the height */
+  justify-content: space-between;  /* Aligns items to the start */
+  align-items: flex-start;
+  border-bottom: 2px solid #ccc; /* Bot border */
+  box-sizing: border-box;
+  background-color: transparent; /* Ensures the menu background matches the page */
 }
 
 .main-menu li {
-  display: flex; /* Ensures that the items can be manipulated more flexibly than inline. inline-block */
+  display: inline-block; /* Ensures that the items can be manipulated more flexibly than inline */
   align-items: center; /* Ensures vertical centering within each list item */
 }
 
@@ -102,14 +101,14 @@ img {
 }
 
 .main-menu li a {
-  text-decoration: none; /* No underlines */
-  color: #000000; /* Text color */
-  font-weight: bold; /* Bold text */
-  font-size: 1.2rem; /* Adjust font size */
-  display: inline-block; /* Allows for padding adjustments */
-  line-height: 60px; /* Matches the menu height to center text visually */
-  padding: 0 20px; /* Horizontal padding only */
-  transition: color 0.3s, text-decoration 0.3s; /* Smooth hover effect */
+  text-decoration: none;
+  color: #000000; /* Ensures text color is visible against the background */
+  font-weight: bold; /* Makes text bold */
+  font-size: 1.2rem; /* Increases the font size */
+  padding: 10px 20px; /* Optional: Adds padding around the links for easier clicking */
+  transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
+  display: flex;
+  align-items: center;
 }
 
 .main-menu li a:hover, .main-menu li a:focus {
