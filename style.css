@@ -176,6 +176,10 @@ FOR THE HOME PAGE SETUP
   background-color: #f2f2f2; /* Uniform background color */
   padding: 20px 0; /* Padding for content spacing */
   box-sizing: border-box; /* Includes padding in width calculation */
+
+  width: calc(100vw + 100px); /* Extends the section width */
+  margin-left: calc(-100px); /* Counteracts the body's left padding */
+
 }
 
 /* General container within #content */
