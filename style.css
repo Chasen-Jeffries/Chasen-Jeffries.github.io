@@ -104,6 +104,9 @@ img {
   font-size: 1.2rem; /* Increases the font size */
   padding: 10px 20px; /* Optional: Adds padding around the links for easier clicking */
   transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
+  
+  line-height: 50px; 
+  transform: translateY(-50%); 
 }
 
 .main-menu li a:hover, .main-menu li a:focus {
