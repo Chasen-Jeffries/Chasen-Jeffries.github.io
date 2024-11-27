@@ -210,7 +210,7 @@ html:not(:target) #Home {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px; /* Adjust padding as needed. 40px 20px */
+  padding: 40px 0; /* Adjust padding as needed. 40px 20px */
   background-color: #f2f2f2; /* Light gray background for the intro section */
 }
 
