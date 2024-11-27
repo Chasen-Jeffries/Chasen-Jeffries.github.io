@@ -208,30 +208,28 @@ html:not(:target) #Home {
 /* Intro Section (Picture and Bio) */
 .intro {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center; /* This will help in centering the content horizontally. space-between */
-  padding: 40px 20px; /* Adjust padding as needed. 40px 20px */
+  justify-content: space-around; /* This will help in centering the content horizontally. space-between */
+  padding: 20px; /* Adjust padding as needed. 40px 20px */
   background-color: #f2f2f2; /* Light gray background for the intro section */
 }
 
 .intro-image {
-  flex: 1 1 50%; /* Allows the image to take up to 50% of the container width */
-  padding-right: 20px; /* Adds some padding between the image and the text */
-  box-sizing: border-box; /* Ensures padding is included in the width calculation */
+  flex: 0 1 45%; /* Flex-grow is 0, flex-shrink is 1, flex-basis is 45% */
+  max-width: 45%; /* Limits width to 45% of its container */
+  text-align: right; /* Aligns the image right within its flex item */
 }
 
 .profile-image {
   width: 100%;
   height: auto;
   border-radius: 10px; /* Adds rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
-  box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
 
 .intro-bio {
-  flex: 1 1 50%; /* Allows the text to take up to 50% of the container width */
-  max-width: 50%; /* Restricts the text to a maximum of 50% of its container's width */
+  flex: 0 1 45%; /* Flex-grow is 0, flex-shrink is 1, flex-basis is 45% */
+  max-width: 45%; /* Limits width to 45% of its container */
+  text-align: left; /* Aligns the text left within its flex item */
   font-size: 1.2rem;
   line-height: 1.6;
   color: #000; /* Black text for contrast */
@@ -284,13 +282,14 @@ html:not(:target) #Home {
   }
 
   .intro-image, .intro-bio {
-    max-width: 100%; /* Makes both the image and text take full width on smaller screens */
-    flex: none; /* Overrides the flex settings used for larger screens */
+    padding: 0 5%; /* Adds padding to each side */
   }
-
+  
+  /* Removes the padding on smaller screens 
   .intro-image {
-    padding-right: 0; /* Removes the padding on smaller screens */
+    padding-right: 0; 
   }
+  */
 
   .portfolio {
     flex-direction: column;
