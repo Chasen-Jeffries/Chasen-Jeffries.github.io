@@ -80,7 +80,7 @@ img {
 .main-menu {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 10px 0;  /* Increased vertical padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,9 +100,11 @@ img {
   padding: 10px 20px; /* Optional: Adds padding around the links for easier clicking */
 }
 
-.main-menu li:not(:first-child) {
-  margin-left: auto; /* Pushes "Work" and "About" to the right */
+.main-menu li:first-child {
+  margin-right: auto; /* Pushes all other items to the right */
 }
 
-
+.main-menu li:not(:first-child) {
+  padding-left: 20px; /* Adds some spacing between the links on the right */
+}
 
