@@ -169,19 +169,36 @@ FOR THE HOME PAGE SETUP
 */
 
 /* Content Section */
+/* Styles specifically for #content to manage visibility based on sections */
 #content {
-  margin-top: 100vh; /* Pushes content below the fullscreen background image */
-  background-color: #f2f2f2; /* Sets the background color for the entire section */
-  width: calc(100vw + 100px); /* Extends the section width */
-  margin-left: calc(-100px); /* Counteracts the body's left padding */
-  box-sizing: border-box; /* Ensures padding is included in width calculations */
+  position: relative; /* Ensures positioning context */
+  margin-top: 100vh; /* Keeps it below the viewport initially */
+  background-color: #f2f2f2; /* Uniform background color */
+  padding: 20px 0; /* Padding for content spacing */
+  box-sizing: border-box; /* Includes padding in width calculation */
 }
 
+/* General container within #content */
 #content .container {
-  max-width: 1200px; /* Restricts the text and content width */
-  margin: 0 auto; /* Centers the content horizontally */
-  padding: 0 100px; /* Maintains the same side padding as the body */
+  max-width: 1200px; /* Maximum width for centered content */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 20px; /* Padding on the sides */
 }
+
+/* Specific sections visibility */
+#Home, #Work, #About {
+  display: none; /* Hide all sections by default */
+}
+
+#Home:target, #Work:target, #About:target {
+  display: block; /* Show the targeted section */
+}
+
+/* Ensure Home is visible if no target is specified in the URL */
+html:not(:target) #Home {
+  display: block;
+}
+
 
 /* Intro Section (Picture and Bio) */
 .intro {
