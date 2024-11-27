@@ -100,17 +100,6 @@ img {
     position: relative; /* Prevents overlap issues */
 }
 
-/* Individual list items */
-.main-menu li {
-  display: flex; /* Use flex for alignment */
-  align-items: flex-start; /* Aligns content to the top */
-}
-
-.main-menu li.right-group {
-  margin-left: auto; /* Pushes the group to the right */
-  display: flex; /* Enables flex layout within the group */
-}
-
 .main-menu li a {
   text-decoration: none; /* No underlines */
   color: #000000; /* Text color */
