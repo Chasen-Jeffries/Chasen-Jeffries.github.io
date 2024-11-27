@@ -187,6 +187,7 @@ FOR THE HOME PAGE SETUP
   max-width: 1200px; /* Maximum width for centered content */
   margin: 0 auto; /* Center the container horizontally */
   padding: 0 20px; /* Padding on the sides */
+  box-sizing: border-box; /* Includes padding in the width calculation, if padding is needed. added */
 }
 
 /* Specific sections visibility */
@@ -209,15 +210,15 @@ html:not(:target) #Home {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* This will help in centering the content horizontally. space-between */
   padding: 40px 20px; /* Adjust padding as needed. 40px 20px */
   background-color: #f2f2f2; /* Light gray background for the intro section */
 }
 
 .intro-image {
   flex: 1 1 50%; /* Allows the image to take up to 50% of the container width */
-  max-width: 50%; /* Restricts the image to a maximum of 50% of its container's width */
   padding-right: 20px; /* Adds some padding between the image and the text */
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
 
 .profile-image {
@@ -225,6 +226,7 @@ html:not(:target) #Home {
   height: auto;
   border-radius: 10px; /* Adds rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
 
 .intro-bio {
@@ -239,19 +241,25 @@ html:not(:target) #Home {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px; /* Adds spacing between items */
+  justify-content: center; /* Ensures content in the portfolio is centered. space-between */
+  /* gap: 20px;  
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  */
+  padding: 0; /* 60px 20px; */
   background-color: #f2f2f2; /* Light gray background for the intro section */
 }
 
 .portfolio-item {
+  flex: 1 1 300px; /* Example flex-basis for responsiveness */
+  margin: 20px; /* Ensure margins do not push content off-center */
+  box-sizing: border-box; /* Includes margins and padding in the width */
+  /* 
   flex: 1;
-  min-width: 250px; /* Ensures items don't shrink too small */
-  max-width: 300px; /* Restricts maximum width */
+  min-width: 250px; 
+  max-width: 300px;  
   text-align: center;
+  */
 }
 
 .portfolio-item img {
