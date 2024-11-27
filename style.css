@@ -76,6 +76,31 @@ img {
   height: auto;
 }
 
+/* Setting up the Main Menu. */
+.main-menu {
+  list-style: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Optional: adds a background color to the menu bar */
+  padding: 10px 0; /* Adds vertical padding for aesthetic spacing */
+  display: flex;
+  justify-content: space-between; /* Spreads the menu items to the full width of the container */
+  border-bottom: 2px solid #ccc; /* Adds a bottom border line */
+}
+
+.main-menu li {
+  display: inline; /* Displays the list items in a line */
+}
+
+.main-menu li a {
+  text-decoration: none;
+  color: #333; /* Ensures text color is visible against the background */
+  padding: 10px 20px; /* Optional: Adds padding around the links for easier clicking */
+}
+
+.main-menu li a:hover {
+  text-decoration: underline;
+}
 
 
 
