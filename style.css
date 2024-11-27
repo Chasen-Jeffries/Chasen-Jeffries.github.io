@@ -96,11 +96,9 @@ img {
     background-color: transparent;
     height: 60px;
     box-sizing: border-box;
-
     z-index: 2; /* Ensures menu is above other elements */
     position: relative; /* Prevents overlap issues */
 }
-
 
 /* Individual list items */
 .main-menu li {
@@ -170,6 +168,16 @@ FOR THE HOME PAGE SETUP
   align-items: center;
   padding: 10px 0;
   box-sizing: border-box; /* Ensures padding is included in width/height */
+}
+
+/* Main Menu Links for Home Page */
+#home .main-menu li a {
+  color: #fff; /* White text for better contrast on the background */
+}
+
+#home .main-menu li a:hover, #home .main-menu li a:focus {
+  text-decoration: underline;
+  color: #ddd; /* Slightly lighter color on hover/focus */
 }
 
 /* Content Below Background Image */
