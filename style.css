@@ -169,48 +169,47 @@ FOR THE HOME PAGE SETUP
   z-index: 1;
 }
 
-/* Intro Section (Full-Screen Height) */
+/* Intro Section */
 .intro {
   display: flex;
   flex-wrap: wrap; /* Stacks elements on smaller screens */
   align-items: center;
   justify-content: space-between; /* Ensures proper spacing between the image and text */
-  margin: 0; /* Removes vertical margins */
-  padding: 0; /* Removes padding */
+  margin: 0;
+  padding: 0;
   height: 100vh; /* Full viewport height */
   position: relative; /* Ensures proper stacking with the main menu */
 }
 
-/* Intro Image (Overlapping Main Menu) */
+/* Intro Image */
 .intro-image {
   flex: 1;
-  margin: 0; /* Removes all margins */
+  margin: 0;
   max-width: 50%; /* Takes up half the screen width */
   height: 100%; /* Stretches to full height */
-  display: flex; /* Ensures content within the div is aligned properly */
-  align-items: center; /* Vertically centers content within the intro image */
-  justify-content: center; /* Centers content horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: url('Images/Professional Photo 3.jpg') center center / cover no-repeat; /* Background image */
 }
 
-/* For the Profile Image inside Intro Image (Optional) */
+/* For the Profile Image inside Intro Image */
 .profile-image {
   width: auto;
   max-height: 90%; /* Scales proportionally within the container */
   border-radius: 10px;
 }
 
-/* Bio Section (Aligned to the Right) */
+/* Bio Section */
 .intro-bio {
   flex: 1;
   font-size: 1.5rem; /* Slightly larger bio font */
   line-height: 1.6;
   color: #000;
-  padding: 0; /* No padding on the left/right */
-  text-align: left; /* Aligns the text to the left */
-  display: flex;
-  align-items: center; /* Centers bio vertically within the intro section */
-  height: 100%; /* Matches the height of the intro-image */
+  padding: 20px; /* Adds spacing */
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent white background for better readability */
+  border-radius: 10px;
 }
 
 /* Portfolio Section */
@@ -228,7 +227,7 @@ FOR THE HOME PAGE SETUP
   flex: 1;
   min-width: 250px; /* Ensures items don't shrink too small */
   max-width: 300px; /* Restricts maximum width */
-  text-align: center; /* Centers text below the image */
+  text-align: center;
 }
 
 .portfolio-item img {
@@ -245,7 +244,9 @@ FOR THE HOME PAGE SETUP
   color: #333;
 }
 
-/* Responsive Design */
+/***********************
+RESPONSIVE DESIGN
+***********************/
 @media (max-width: 768px) {
   .intro {
     flex-direction: column; /* Stacks the intro image and bio */
@@ -255,12 +256,12 @@ FOR THE HOME PAGE SETUP
   .intro-image {
     max-width: 100%;
     height: 50vh; /* Limits the image height */
-    background-size: contain; /* Adjusts for smaller screens */
+    background-size: contain;
   }
 
   .intro-bio {
     padding: 20px; /* Adds padding for better spacing on small screens */
-    text-align: center; /* Centers the bio text */
+    text-align: center;
   }
 
   .portfolio {
@@ -272,4 +273,3 @@ FOR THE HOME PAGE SETUP
     max-width: 100%;
   }
 }
-
