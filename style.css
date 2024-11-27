@@ -78,18 +78,22 @@ img {
 
 /* Setting up the Main Menu. */
 .main-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0; /* No padding that could affect alignment */
-  display: flex;
-  justify-content: space-between; /* Aligns "Home" to the left, others to the right */
-  align-items: flex-start; /* Aligns items to the top of the container */
-  border-bottom: 2px solid #ccc; /* Bottom border */
-  border-top: 2px solid #ccc; /* Top border */
-  background-color: transparent; /* Matches the page background */
-  height: 60px; /* Fixed height for menu container */
-  box-sizing: border-box; /* Ensures padding and borders are included in the height */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: normal;
+    justify-content: normal;
+    align-items: flex-end;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    height: 60px;
+    box-sizing: border-box;
 }
+
+
 
 /* Individual list items */
 .main-menu li {
