@@ -6,9 +6,9 @@ html {
 body {
   font-family: Arial, sans-serif; /* Sets Arial as the default font */
   font-size: 0.875rem; /* 14px when 1rem = 16px */
-  color: #333; /* Dark gray text color for better readability */
+  color: #000000; /* Dark gray text color for better readability */
   margin: 0; /* Removes default margin */
-  padding: 0; /* Removes default padding */
+  padding: 0 20px; /* Adds padding of 20px on the left and right */
 }
 
 
@@ -16,32 +16,16 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-weight: bold;
+  font-weight: bold; /* Ensures headings are bold */
 }
 
-h1 {
-  font-size: 2.25rem; /* 36px */
-}
+h1 { font-size: 2.25rem; /* 36px */ }
+h2 { font-size: 1.5rem; /* 24px */ }
+h3 { font-size: 1.25rem; /* 20px */ }
+h4 { font-size: 1rem; /* 16px */ }
+h5 { font-size: 0.875rem; /* 14px */ }
+h6 { font-size: 0.75rem; /* 12px */ }
 
-h2 {
-  font-size: 1.5rem; /* 24px */
-}
-
-h3 {
-  font-size: 1.25rem; /* 20px */
-}
-
-h4 {
-  font-size: 1rem; /* 16px */
-}
-
-h5 {
-  font-size: 0.875rem; /* 14px */
-}
-
-h6 {
-  font-size: 0.75rem; /* 12px */
-}
 
 /* Setting up the Paragraphs */
 p {
@@ -60,16 +44,15 @@ a:hover, a:focus {
   color: #004499; /* Darker shade for hover state */
 }
 
-/* Setting up the Lists.        Is this necessary? 
-    ul, ol {
-      margin-left: 20px;
-      padding-left: 0;
-    }
-    
-    li {
-      margin-bottom: 0.5rem;
-    }
-*/
+/* Setting up the Lists. */
+ul, ol {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
 
 /* Setting up the Buttons.     Is this necessary? */
 button {
