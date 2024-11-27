@@ -86,7 +86,6 @@ img {
   align-items: center;
   border-bottom: 2px solid #ccc;
   background-color: transparent; /* Ensures the menu background matches the page */
-  height: 50px; /* You can adjust this height based on your design preference */
 }
 
 .main-menu li {
@@ -105,8 +104,6 @@ img {
   font-size: 1.2rem; /* Increases the font size */
   padding: 10px 20px; /* Optional: Adds padding around the links for easier clicking */
   transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
-  line-height: 50px; /* Aligns text vertically by matching the container's height */
-
 }
 
 .main-menu li a:hover, .main-menu li a:focus {
