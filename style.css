@@ -157,9 +157,13 @@ FOR THE HOME PAGE SETUP
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding-top: 100vh; /* Pushes content down to start below the background */
-  background-color: #f2f2f2; /* Ensure contrast below the image */
-  z-index: 1; /* Places the content above the background */
+  padding: 0; /* Removes unnecessary padding for the background section */
+}
+
+#content {
+  margin-top: 100vh; /* Pushes content below the fullscreen background image */
+  background-color: #fff; /* White background for contrast */
+  padding: 60px 20px; /* Padding for inner content */
 }
 
 /* Intro Section (Picture and Bio) */
@@ -167,8 +171,8 @@ FOR THE HOME PAGE SETUP
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 40px;
-  padding: 40px 20px;
+  justify-content: space-between;
+  padding: 40px 20px; /* Adjust padding as needed */
 }
 
 .intro-image {
@@ -200,7 +204,7 @@ FOR THE HOME PAGE SETUP
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
-  background-color: #fff; /* Light background for contrast */
+  background-color: #f9f9f9; /* Light background */
 }
 
 .portfolio-item {
@@ -244,4 +248,3 @@ FOR THE HOME PAGE SETUP
     max-width: 100%;
   }
 }
-
