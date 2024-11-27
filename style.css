@@ -80,16 +80,15 @@ img {
 .main-menu {
   list-style: none;
   margin: 0;
-  padding: 0;  /* Increased vertical padding */
+  padding: 0; /* No padding that could affect alignment */
   display: flex;
-  justify-content: flex-start;  /* Aligns items to the start */
-  align-items: center;
-  border-bottom: 2px solid #ccc; /* Bot border */
-  border-top: 2px solid #ccc;    /* Top border */
-  background-color: transparent; /* Ensures the menu background matches the page */
-
-  height: 60px; /* Set a fixed height for vertical alignment control */
-
+  justify-content: space-between; /* Aligns "Home" to the left, others to the right */
+  align-items: center; /* Centers items vertically */
+  border-bottom: 2px solid #ccc; /* Bottom border */
+  border-top: 2px solid #ccc; /* Top border */
+  background-color: transparent; /* Matches the page background */
+  height: 60px; /* Fixed height for menu container */
+  box-sizing: border-box; /* Ensures padding and borders are included in the height */
 }
 
 .main-menu li {
@@ -103,16 +102,14 @@ img {
 }
 
 .main-menu li a {
-  text-decoration: none;
-  color: #000000; /* Ensures text color is visible against the background */
-  font-weight: bold; /* Makes text bold */
-  font-size: 1.2rem; /* Increases the font size */
-  padding: 0 20px; /* Optional: Adds padding around the links for easier clicking. 10 20 */
-  display: flex; /* Flex alignment for the anchor tag itself */
-  align-items: center; /* Centers text within the link container */
-  transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
-  
-  height: 100%; /* Matches the height of the menu for consistent alignment */
+  text-decoration: none; /* No underlines */
+  color: #000000; /* Text color */
+  font-weight: bold; /* Bold text */
+  font-size: 1.2rem; /* Adjust font size */
+  display: inline-block; /* Allows for padding adjustments */
+  line-height: 60px; /* Matches the menu height to center text visually */
+  padding: 0 20px; /* Horizontal padding only */
+  transition: color 0.3s, text-decoration 0.3s; /* Smooth hover effect */
 }
 
 .main-menu li a:hover, .main-menu li a:focus {
