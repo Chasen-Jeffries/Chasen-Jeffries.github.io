@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif; /* Sets Arial as the default font */
+  font-family: 'Roboto', sans-serif; /* Sets Roboto as the default font */
   font-size: 1rem; /* Increased base font size (16px) */
   /* font-weight: bold;  Makes all text bold by default */
   color: #000000; /* Dark gray text color for better readability */
