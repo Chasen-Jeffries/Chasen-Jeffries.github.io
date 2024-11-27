@@ -149,7 +149,7 @@ FOR THE HOME PAGE SETUP
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures the image covers the screen without distortion */
-  opacity: 0.4; /* Makes the background semi-transparent */
+  opacity: 0.8; /* Makes the background semi-transparent */
 }
 
 /* Main Content Section */
