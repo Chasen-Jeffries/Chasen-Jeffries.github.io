@@ -193,12 +193,13 @@ FOR THE HOME PAGE SETUP
   background: url('Images/Professional Photo 3.jpg') center center / cover no-repeat; /* Background image */
 }
 
-/* For the Profile Image inside Intro Image */
+/* For the Profile Image inside Intro Image 
 .profile-image {
   width: auto;
-  max-height: 90%; /* Scales proportionally within the container */
+  max-height: 90%; 
   border-radius: 10px;
 }
+*/
 
 /* Bio Section */
 .intro-bio {
