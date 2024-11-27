@@ -84,7 +84,7 @@ img {
   display: flex;
   justify-content: flex-start;  /* Aligns items to the start */
   align-items: center;
-  border-bottom: 0px solid #ccc;
+  border-bottom: 1px solid #ccc;
   background-color: transparent; /* Ensures the menu background matches the page */
 }
 
