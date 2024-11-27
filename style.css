@@ -140,7 +140,7 @@ FOR THE HOME PAGE SETUP
 /* Fullscreen Background Section */
 #home {
   position: relative;
-  width: 100%;
+  width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
   background: url('background.jpg') center center / cover no-repeat; /* Background image */
   color: #fff; /* White text for readability */
@@ -149,44 +149,20 @@ FOR THE HOME PAGE SETUP
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0; /* Removes any padding or margin from parent */
-  padding: 0; /* Ensures no padding from parent is applied */
-  z-index: 1;
+  margin: 0; /* Ensures no margin around the section */
+  padding: 0; /* Removes padding specifically for the #home section */
+  box-sizing: border-box; /* Ensures borders and padding are included in width/height */
 }
 
-#home h1,
-#home p {
-  z-index: 2; /* Ensures text stays above the background image */
-  margin: 0;
-  padding: 0;
-}
-
-/* Ensure the Main Menu Overlaps the Background Image */
-.main-menu {
-  z-index: 3; /* Keeps the main menu on top */
-  position: fixed; /* Ensures it stays in place while scrolling */
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: transparent; /* Transparent so it overlays the background image */
-  border-bottom: 2px solid #000;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-/* Remaining Page Content */
+/* Content Below Background Image */
 .intro {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 0;
-  padding: 60px 20px; /* Adds spacing between sections */
-  background-color: #fff; /* White background for contrast after scrolling */
-  color: #000; /* Black text for better readability */
+  padding: 60px 20px; /* Applies padding to maintain alignment for all other sections */
+  background-color: #fff; /* White background for contrast */
+  color: #000; /* Black text for readability */
 }
 
 .intro-image {
@@ -217,7 +193,7 @@ FOR THE HOME PAGE SETUP
   gap: 20px; /* Adds spacing between items */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 60px 20px; /* Ensures portfolio content aligns with the rest of the site */
   background-color: #f9f9f9; /* Light background for contrast */
 }
 
@@ -241,5 +217,6 @@ FOR THE HOME PAGE SETUP
   font-weight: bold;
   color: #333;
 }
+
 
 
