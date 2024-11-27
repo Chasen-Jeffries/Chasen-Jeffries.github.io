@@ -164,6 +164,7 @@ FOR THE HOME PAGE SETUP
   margin-top: 100vh; /* Pushes content below the fullscreen background image */
   background-color: #fff; /* White background for contrast */
   padding: 60px 20px; /* Padding for inner content */
+  background-color: #f2f2f2; /* Sets the content background to light gray */
 }
 
 /* Intro Section (Picture and Bio) */
