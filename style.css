@@ -6,18 +6,15 @@ html {
 body {
   font-family: 'Roboto', sans-serif; /* Sets Roboto as the default font */
   font-size: 1rem; /* Increased base font size (16px) */
-  /* font-weight: bold;  Makes all text bold by default */
   color: #000000; /* Dark gray text color for better readability */
   margin: 0; /* Removes default margin */
   padding: 0 100px; /* Adds padding of 100px on the left and right */
 }
 
-
 /* Setting up the Header Sizes */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  /* font-weight: bold; Ensures headings are bold */
 }
 
 h1 { font-size: 2.5rem; /* Increased to 40px */ }
@@ -26,7 +23,6 @@ h3 { font-size: 1.75rem; /* Increased to 28px */ }
 h4 { font-size: 1.5rem; /* Increased to 24px */ }
 h5 { font-size: 1.25rem; /* Increased to 20px */ }
 h6 { font-size: 1rem;   /* Matches body text */ }
-
 
 /* Setting up the Paragraphs */
 p {
@@ -48,7 +44,7 @@ a:hover, a:focus {
   color: #004499; /* Darker shade for hover state */
 }
 
-/* Setting up the Lists. */
+/* Setting up the Lists */
 ul, ol {
   margin-left: 20px;
   padding-left: 0;
@@ -58,7 +54,7 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* Setting up the Buttons.     Is this necessary? */
+/* Setting up the Buttons */
 button {
   background-color: #0066cc;
   color: white;
@@ -66,7 +62,6 @@ button {
   padding: 10px 20px;
   cursor: pointer;
   font-size: 1rem; /* Matches global size */
-  /* font-weight: bold; Ensures buttons are bold */
   border-radius: 5px;
 }
 
@@ -74,30 +69,29 @@ button:hover {
   background-color: #004499;
 }
 
-
-/* Setting up the Images. */
+/* Setting up the Images */
 img {
   max-width: 100%; /* Makes images responsive */
   height: auto;
 }
 
-/* Setting up the Main Menu. */
+/* Setting up the Main Menu */
 .main-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: normal;
-    justify-content: normal;
-    align-items: flex-end;
-    border-bottom: 2px solid #000;
-    background-color: transparent;
-    height: 60px;
-    box-sizing: border-box;
-    z-index: 2; /* Ensures menu is above other elements */
-    position: relative; /* Prevents overlap issues */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: flex-end;
+  border-bottom: 2px solid #000;
+  background-color: transparent;
+  height: 60px;
+  box-sizing: border-box;
+  z-index: 2; /* Ensures menu is above other elements */
+  position: relative; /* Prevents overlap issues */
 }
 
 .main-menu li a {
@@ -118,7 +112,6 @@ img {
 .main-menu li a:not(:last-child) {
   margin-right: 20px; /* Adds space between "Work" and "About" links */
 }
-
 
 /***********************
 FOR THE HOME PAGE SETUP
@@ -160,11 +153,12 @@ FOR THE HOME PAGE SETUP
 }
 
 /* Main Menu Links for Home Page */
-#home .main-menu li a {
+#home + .main-menu li a {
   color: #fff; /* White text for better contrast on the background */
 }
 
-#home .main-menu li a:hover, #home .main-menu li a:focus {
+#home + .main-menu li a:hover,
+#home + .main-menu li a:focus {
   text-decoration: underline;
   color: #ddd; /* Slightly lighter color on hover/focus */
 }
@@ -222,8 +216,8 @@ FOR THE HOME PAGE SETUP
 .portfolio-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
 
 .portfolio-item h3 {
@@ -232,7 +226,3 @@ FOR THE HOME PAGE SETUP
   font-weight: bold;
   color: #333;
 }
-
-
-
-
