@@ -149,9 +149,27 @@ FOR THE HOME PAGE SETUP
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0; /* Ensures no margin around the section */
+  margin: 0; /* Removes any margin around the section */
   padding: 0; /* Removes padding specifically for the #home section */
   box-sizing: border-box; /* Ensures borders and padding are included in width/height */
+  margin-left: calc(-100px); /* Removes left padding by using calc() */
+  margin-right: calc(-100px); /* Removes right padding by using calc() */
+}
+
+/* Main Menu Overlap */
+.main-menu {
+  position: fixed; /* Ensures the menu stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  background-color: transparent; /* Transparent to show the background image */
+  border-bottom: 2px solid #000; /* Keeps the bottom border */
+  z-index: 3; /* Ensures it appears above the background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box; /* Ensures padding is included in width/height */
 }
 
 /* Content Below Background Image */
@@ -162,7 +180,7 @@ FOR THE HOME PAGE SETUP
   justify-content: space-between;
   padding: 60px 20px; /* Applies padding to maintain alignment for all other sections */
   background-color: #fff; /* White background for contrast */
-  color: #000; /* Black text for readability */
+  color: #000; /* Black text */
 }
 
 .intro-image {
@@ -180,7 +198,7 @@ FOR THE HOME PAGE SETUP
 
 .intro-bio {
   flex: 2;
-  font-size: 1.5rem; /* Slightly larger text */
+  font-size: 1.5rem;
   line-height: 1.6;
   color: #000;
   text-align: left;
@@ -190,11 +208,11 @@ FOR THE HOME PAGE SETUP
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px; /* Adds spacing between items */
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px; /* Ensures portfolio content aligns with the rest of the site */
-  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* Light background */
 }
 
 .portfolio-item {
@@ -207,8 +225,8 @@ FOR THE HOME PAGE SETUP
 .portfolio-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Optional: Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-item h3 {
@@ -217,6 +235,7 @@ FOR THE HOME PAGE SETUP
   font-weight: bold;
   color: #333;
 }
+
 
 
 
