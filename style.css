@@ -160,11 +160,27 @@ FOR THE HOME PAGE SETUP
   padding: 0; /* Removes unnecessary padding for the background section */
 }
 
+/*
+#content {
+  margin-top: 100vh;  
+  padding: 60px 20px; 
+  background-color: #f2f2f2; 
+}
+*/
+
+/* Content Section */
 #content {
   margin-top: 100vh; /* Pushes content below the fullscreen background image */
-  background-color: #fff; /* White background for contrast */
-  padding: 60px 20px; /* Padding for inner content */
-  background-color: #f2f2f2; /* Sets the content background to light gray */
+  background-color: #f2f2f2; /* Sets the background color for the entire section */
+  padding: 40px 0; /* Adds vertical padding */
+  width: 100vw; /* Ensures the background spans the full width of the viewport */
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+#content .container {
+  max-width: 1200px; /* Restricts the text and content width */
+  margin: 0 auto; /* Centers the content horizontally */
+  padding: 0 100px; /* Maintains the same side padding as the body */
 }
 
 /* Intro Section (Picture and Bio) */
