@@ -140,7 +140,7 @@ FOR THE HOME PAGE SETUP
 /* Fullscreen Background Section */
 #home {
   position: relative;
-  width: 100%;
+  width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
   background: url('background.jpg') center center / cover no-repeat; /* Background image */
   color: #fff; /* White text for readability */
@@ -149,44 +149,51 @@ FOR THE HOME PAGE SETUP
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0; /* Removes any padding or margin from parent */
-  padding: 0; /* Ensures no padding from parent is applied */
-  z-index: 1;
+  margin: 0; /* Removes any margin */
+  padding: 0; /* Removes any padding */
+  box-sizing: border-box; /* Ensures width/height calculations include border and padding */
 }
 
-#home h1,
-#home p {
-  z-index: 2; /* Ensures text stays above the background image */
-  margin: 0;
-  padding: 0;
-}
-
-/* Ensure the Main Menu Overlaps the Background Image */
+/* Main Menu Overlap */
 .main-menu {
-  z-index: 3; /* Keeps the main menu on top */
-  position: fixed; /* Ensures it stays in place while scrolling */
+  position: fixed; /* Ensures the menu stays at the top */
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: transparent; /* Transparent so it overlays the background image */
-  border-bottom: 2px solid #000;
-  padding: 10px 0;
+  width: 100%; /* Full width */
+  background-color: transparent; /* Transparent to show the background image */
+  border-bottom: 2px solid #000; /* Keeps the bottom border */
+  z-index: 3; /* Ensures it appears above the background */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
+  padding: 10px 0;
+  box-sizing: border-box; /* Ensures padding is included in height */
 }
 
-/* Remaining Page Content */
+/* Main Menu Links */
+.main-menu li a {
+  text-decoration: none;
+  color: #fff; /* White links for visibility on background */
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.main-menu li a:hover, .main-menu li a:focus {
+  text-decoration: underline;
+  color: #ddd; /* Slightly lighter color on hover */
+}
+
+/* Intro Section */
 .intro {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 0;
-  padding: 60px 20px; /* Adds spacing between sections */
-  background-color: #fff; /* White background for contrast after scrolling */
-  color: #000; /* Black text for better readability */
+  padding: 60px 20px;
+  background-color: #fff; /* White background for contrast */
+  color: #000; /* Black text */
 }
 
 .intro-image {
@@ -204,7 +211,7 @@ FOR THE HOME PAGE SETUP
 
 .intro-bio {
   flex: 2;
-  font-size: 1.5rem; /* Slightly larger text */
+  font-size: 1.5rem;
   line-height: 1.6;
   color: #000;
   text-align: left;
@@ -214,11 +221,11 @@ FOR THE HOME PAGE SETUP
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px; /* Adds spacing between items */
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
-  background-color: #f9f9f9; /* Light background for contrast */
+  background-color: #f9f9f9; /* Light background */
 }
 
 .portfolio-item {
@@ -231,8 +238,8 @@ FOR THE HOME PAGE SETUP
 .portfolio-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Optional: Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-item h3 {
@@ -241,5 +248,6 @@ FOR THE HOME PAGE SETUP
   font-weight: bold;
   color: #333;
 }
+
 
 
