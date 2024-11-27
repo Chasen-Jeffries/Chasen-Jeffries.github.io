@@ -137,21 +137,47 @@ img {
 FOR THE HOME PAGE SETUP
 ***********************/
 
-/* Top Section Background */
+/* Fullscreen Background Section */
 #home {
   position: relative;
   width: 100%;
   height: 100vh; /* Full viewport height */
   background: url('background.jpg') center center / cover no-repeat; /* Background image */
+  color: #fff; /* White text for readability */
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff; /* White text for readability */
-  text-align: center;
+  margin: 0; /* Removes any padding or margin from parent */
+  padding: 0; /* Ensures no padding from parent is applied */
+  z-index: 1;
 }
 
-/* Bio Section */
+#home h1,
+#home p {
+  z-index: 2; /* Ensures text stays above the background image */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the Main Menu Overlaps the Background Image */
+.main-menu {
+  z-index: 3; /* Keeps the main menu on top */
+  position: fixed; /* Ensures it stays in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent; /* Transparent so it overlays the background image */
+  border-bottom: 2px solid #000;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Remaining Page Content */
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -163,7 +189,6 @@ FOR THE HOME PAGE SETUP
   color: #000; /* Black text for better readability */
 }
 
-/* Intro Image */
 .intro-image {
   flex: 1;
   margin-right: 20px;
@@ -177,7 +202,6 @@ FOR THE HOME PAGE SETUP
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
 
-/* Bio Text */
 .intro-bio {
   flex: 2;
   font-size: 1.5rem; /* Slightly larger text */
@@ -186,7 +210,6 @@ FOR THE HOME PAGE SETUP
   text-align: left;
 }
 
-/* Portfolio Section */
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -208,7 +231,7 @@ FOR THE HOME PAGE SETUP
 .portfolio-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 10px; /* Optional: Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
 
@@ -219,31 +242,4 @@ FOR THE HOME PAGE SETUP
   color: #333;
 }
 
-/***********************
-RESPONSIVE DESIGN
-***********************/
-@media (max-width: 768px) {
-  #home {
-    height: 100vh; /* Keeps the background section full height on smaller screens */
-    padding: 20px;
-  }
-
-  .intro {
-    flex-direction: column; /* Stacks image and bio vertically */
-    text-align: center;
-  }
-
-  .intro-image {
-    margin: 0 0 20px 0;
-  }
-
-  .portfolio {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .portfolio-item {
-    max-width: 100%;
-  }
-}
 
