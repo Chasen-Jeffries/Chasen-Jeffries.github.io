@@ -77,22 +77,24 @@ img {
 }
 
 /* Setting up the Main Menu. */
-/* Setting up the Main Menu. */
 .main-menu {
   list-style: none;
   margin: 0;
-  padding: 0;  /* Increased vertical padding */
+  padding: 0; /* No padding that could affect alignment */
   display: flex;
-  justify-content: space-between;  /* Aligns items to the start */
-  align-items: flex-start;
-  border-bottom: 2px solid #ccc; /* Bot border */
-  box-sizing: border-box;
-  background-color: transparent; /* Ensures the menu background matches the page */
+  justify-content: space-between; /* Aligns "Home" to the left, others to the right */
+  align-items: flex-start; /* Aligns items to the top of the container */
+  border-bottom: 2px solid #ccc; /* Bottom border */
+  border-top: 2px solid #ccc; /* Top border */
+  background-color: transparent; /* Matches the page background */
+  height: 60px; /* Fixed height for menu container */
+  box-sizing: border-box; /* Ensures padding and borders are included in the height */
 }
 
+/* Individual list items */
 .main-menu li {
-  display: inline-block; /* Ensures that the items can be manipulated more flexibly than inline */
-  align-items: center; /* Ensures vertical centering within each list item */
+  display: flex; /* Use flex for alignment */
+  align-items: flex-start; /* Aligns content to the top */
 }
 
 .main-menu li.right-group {
@@ -101,14 +103,13 @@ img {
 }
 
 .main-menu li a {
-  text-decoration: none;
-  color: #000000; /* Ensures text color is visible against the background */
-  font-weight: bold; /* Makes text bold */
-  font-size: 1.2rem; /* Increases the font size */
-  padding: 10px 20px; /* Optional: Adds padding around the links for easier clicking */
-  transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
-  display: flex;
-  align-items: center;
+  text-decoration: none; /* No underlines */
+  color: #000000; /* Text color */
+  font-weight: bold; /* Bold text */
+  font-size: 1.2rem; /* Adjust font size */
+  display: inline-block; /* Allows for padding adjustments */
+  padding: 10px 20px; /* Horizontal and vertical padding for better spacing */
+  transition: color 0.3s, text-decoration 0.3s; /* Smooth hover effect */
 }
 
 .main-menu li a:hover, .main-menu li a:focus {
