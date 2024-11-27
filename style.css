@@ -8,7 +8,7 @@ body {
   font-size: 0.875rem; /* 14px when 1rem = 16px */
   color: #000000; /* Dark gray text color for better readability */
   margin: 0; /* Removes default margin */
-  padding: 0 100px; /* Adds padding of 20px on the left and right */
+  padding: 0 100px; /* Adds padding of 100px on the left and right */
 }
 
 
