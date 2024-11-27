@@ -81,9 +81,9 @@ img {
   list-style: none; /* Removes bullet points */
   margin: 0;
   padding: 0;
-  padding: 10px 0; /* Adds vertical padding for aesthetic spacing */
   display: flex;
   justify-content: space-between; /* Spreads the menu items to the full width of the container */
+  align-items: center;
   border-bottom: 2px solid #ccc; /* Adds a bottom border line */
 }
 
@@ -93,12 +93,14 @@ img {
 
 .main-menu li a {
   text-decoration: none;
-  color: #333; /* Ensures text color is visible against the background */
+  color: #000000; /* Ensures text color is visible against the background */
+  font-weight: bold; /* Makes text bold */
+  font-size: 1.2rem; /* Increases the font size */
   padding: 10px 20px; /* Optional: Adds padding around the links for easier clicking */
 }
 
-.main-menu li a:hover {
-  text-decoration: underline;
+.main-menu li:not(:first-child) {
+  margin-left: auto; /* Pushes "Work" and "About" to the right */
 }
 
 
