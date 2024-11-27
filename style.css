@@ -5,7 +5,8 @@ html {
 
 body {
   font-family: Arial, sans-serif; /* Sets Arial as the default font */
-  font-size: 0.875rem; /* 14px when 1rem = 16px */
+  font-size: 1rem; /* Increased base font size (16px) */
+  font-weight: bold; /* Makes all text bold by default */
   color: #000000; /* Dark gray text color for better readability */
   margin: 0; /* Removes default margin */
   padding: 0 100px; /* Adds padding of 100px on the left and right */
@@ -19,24 +20,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold; /* Ensures headings are bold */
 }
 
-h1 { font-size: 2.25rem; /* 36px */ }
-h2 { font-size: 1.5rem; /* 24px */ }
-h3 { font-size: 1.25rem; /* 20px */ }
-h4 { font-size: 1rem; /* 16px */ }
-h5 { font-size: 0.875rem; /* 14px */ }
-h6 { font-size: 0.75rem; /* 12px */ }
+h1 { font-size: 2.5rem; /* Increased to 40px */ }
+h2 { font-size: 2rem;   /* Increased to 32px */ }
+h3 { font-size: 1.75rem; /* Increased to 28px */ }
+h4 { font-size: 1.5rem; /* Increased to 24px */ }
+h5 { font-size: 1.25rem; /* Increased to 20px */ }
+h6 { font-size: 1rem;   /* Matches body text */ }
 
 
 /* Setting up the Paragraphs */
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem; /* Slightly increased bottom margin for better spacing */
+  font-size: 1.1rem; /* Slightly larger text for readability */
 }
 
 /* Setting up the Links */
 a {
   color: #0066cc; /* Set your preferred link color */
   text-decoration: none;
+  font-size: inherit; /* Inherits font size from parent */
+  font-weight: inherit; /* Inherits boldness from parent */
 }
 
 a:hover, a:focus {
@@ -61,7 +65,8 @@ button {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 0.875rem;
+  font-size: 1rem; /* Matches global size */
+  font-weight: bold; /* Ensures buttons are bold */
   border-radius: 5px;
 }
 
@@ -92,7 +97,6 @@ img {
     height: 60px;
     box-sizing: border-box;
 }
-
 
 
 /* Individual list items */
