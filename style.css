@@ -81,7 +81,6 @@ img {
   list-style: none; /* Removes bullet points */
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Optional: adds a background color to the menu bar */
   padding: 10px 0; /* Adds vertical padding for aesthetic spacing */
   display: flex;
   justify-content: space-between; /* Spreads the menu items to the full width of the container */
