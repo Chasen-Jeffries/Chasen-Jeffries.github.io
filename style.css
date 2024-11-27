@@ -160,13 +160,6 @@ FOR THE HOME PAGE SETUP
   padding: 0; /* Removes unnecessary padding for the background section */
 }
 
-/*
-#content {
-  margin-top: 100vh;  
-  padding: 60px 20px; 
-  background-color: #f2f2f2; 
-}
-*/
 
 /* Content Section */
 /* Styles specifically for #content to manage visibility based on sections */
@@ -209,15 +202,15 @@ html:not(:target) #Home {
 .intro {
   display: flex;
   align-items: center;
-  justify-content: space-around; /* This will help in centering the content horizontally. space-between */
+  /* This will help in centering the content horizontally.  justify-content: space-around; */
   padding: 20px; /* Adjust padding as needed. 40px 20px */
   background-color: #f2f2f2; /* Light gray background for the intro section */
 }
 
 .intro-image {
-  flex: 0 1 45%; /* Flex-grow is 0, flex-shrink is 1, flex-basis is 45% */
-  max-width: 45%; /* Limits width to 45% of its container */
-  text-align: right; /* Aligns the image right within its flex item */
+  flex: 0 0 40%; /* flex-grow is 0, flex-shrink is 0, flex-basis is 40% */
+  max-width: 40%; /* Limits width to 40% of its container to keep it on the left */
+  margin-right: 10%; /* Adds a margin to the right to push it further from center */
 }
 
 .profile-image {
@@ -227,8 +220,7 @@ html:not(:target) #Home {
 }
 
 .intro-bio {
-  flex: 0 1 45%; /* Flex-grow is 0, flex-shrink is 1, flex-basis is 45% */
-  max-width: 45%; /* Limits width to 45% of its container */
+  flex: 1; /* Flex-grow is 0, flex-shrink is 1, flex-basis is 45% */
   text-align: left; /* Aligns the text left within its flex item */
   font-size: 1.2rem;
   line-height: 1.6;
