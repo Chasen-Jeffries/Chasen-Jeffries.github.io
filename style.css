@@ -6,15 +6,18 @@ html {
 body {
   font-family: 'Roboto', sans-serif; /* Sets Roboto as the default font */
   font-size: 1rem; /* Increased base font size (16px) */
+  /* font-weight: bold;  Makes all text bold by default */
   color: #000000; /* Dark gray text color for better readability */
   margin: 0; /* Removes default margin */
   padding: 0 100px; /* Adds padding of 100px on the left and right */
 }
 
+
 /* Setting up the Header Sizes */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  /* font-weight: bold; Ensures headings are bold */
 }
 
 h1 { font-size: 2.5rem; /* Increased to 40px */ }
@@ -23,6 +26,7 @@ h3 { font-size: 1.75rem; /* Increased to 28px */ }
 h4 { font-size: 1.5rem; /* Increased to 24px */ }
 h5 { font-size: 1.25rem; /* Increased to 20px */ }
 h6 { font-size: 1rem;   /* Matches body text */ }
+
 
 /* Setting up the Paragraphs */
 p {
@@ -44,7 +48,7 @@ a:hover, a:focus {
   color: #004499; /* Darker shade for hover state */
 }
 
-/* Setting up the Lists */
+/* Setting up the Lists. */
 ul, ol {
   margin-left: 20px;
   padding-left: 0;
@@ -54,7 +58,7 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* Setting up the Buttons */
+/* Setting up the Buttons.     Is this necessary? */
 button {
   background-color: #0066cc;
   color: white;
@@ -62,6 +66,7 @@ button {
   padding: 10px 20px;
   cursor: pointer;
   font-size: 1rem; /* Matches global size */
+  /* font-weight: bold; Ensures buttons are bold */
   border-radius: 5px;
 }
 
@@ -69,29 +74,40 @@ button:hover {
   background-color: #004499;
 }
 
-/* Setting up the Images */
+
+/* Setting up the Images. */
 img {
   max-width: 100%; /* Makes images responsive */
   height: auto;
 }
 
-/* Setting up the Main Menu */
+/* Setting up the Main Menu. */
 .main-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: normal;
-  justify-content: normal;
-  align-items: flex-end;
-  border-bottom: 2px solid #000;
-  background-color: transparent;
-  height: 60px;
-  box-sizing: border-box;
-  z-index: 2; /* Ensures menu is above other elements */
-  position: relative; /* Prevents overlap issues */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: normal;
+    justify-content: normal;
+    align-items: flex-end;
+    border-bottom: 2px solid #000;
+    background-color: transparent;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+
+/* Individual list items */
+.main-menu li {
+  display: flex; /* Use flex for alignment */
+  align-items: flex-start; /* Aligns content to the top */
+}
+
+.main-menu li.right-group {
+  margin-left: auto; /* Pushes the group to the right */
+  display: flex; /* Enables flex layout within the group */
 }
 
 .main-menu li a {
@@ -113,95 +129,85 @@ img {
   margin-right: 20px; /* Adds space between "Work" and "About" links */
 }
 
-/* Main Menu Links for Home Page */
-body.home-page .main-menu li a {
-  color: #fff; /* White text for better contrast on the background */
-}
-
-body.home-page .main-menu li a:hover, 
-body.home-page .main-menu li a:focus {
-  text-decoration: underline;
-  color: #ddd; /* Slightly lighter color on hover/focus */
-}
 
 /***********************
-FOR THE HOME PAGE SETUP
-***********************/
+FOR THE HOME PAGE SETUP 
+*/
 
-/* Fullscreen Background Section */
-#home {
-  position: relative;
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
-  background: url('background.jpg') center center / cover no-repeat; /* Background image */
-  color: #fff; /* White text for readability */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0; /* Removes any margin around the section */
-  padding: 0; /* Removes padding specifically for the #home section */
-  box-sizing: border-box; /* Ensures borders and padding are included in width/height */
-  margin-left: calc(-100px); /* Removes left padding by using calc() */
-  margin-right: calc(-100px); /* Removes right padding by using calc() */
+/* Fullscreen Background */
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensures the background stays behind content */
 }
 
-/* Content Below Background Image */
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the screen without distortion */
+  opacity: 0.4; /* Makes the background semi-transparent */
+}
+
+/* Main Content Container */
+#home .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative; /* Ensures content stays above the background */
+  z-index: 1;
+}
+
+/* Intro Section (Picture and Bio) */
 .intro {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Stacks elements on smaller screens */
   align-items: center;
-  justify-content: space-between;
-  padding: 60px 20px; /* Applies padding to maintain alignment for all other sections */
-  background-color: #fff; /* White background for contrast */
-  color: #000; /* Black text */
+  margin-bottom: 40px;
 }
 
 .intro-image {
   flex: 1;
+  max-width: 300px; /* Restricts the image size */
   margin-right: 20px;
-  max-width: 300px; /* Restricts image width */
 }
 
 .profile-image {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  border-radius: 10px; /* Adds rounded corners */
 }
 
 .intro-bio {
   flex: 2;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.6;
-  color: #000;
-  text-align: left;
+  color: #000; /* Ensures text is readable over the semi-transparent background */
 }
 
+/* Portfolio Section */
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
-  background-color: #f9f9f9; /* Light background */
+  justify-content: space-between; /* Creates equal spacing between items */
+  gap: 20px; /* Adds spacing between items */
 }
 
 .portfolio-item {
   flex: 1;
-  min-width: 250px;
-  max-width: 300px;
-  text-align: center;
+  min-width: 250px; /* Ensures items don't shrink too small */
+  max-width: 300px; /* Restricts maximum width */
+  text-align: center; /* Centers text below the image */
 }
 
 .portfolio-item img {
   width: 100%;
   height: auto;
   border-radius: 10px; /* Optional: Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for a polished look */
 }
 
 .portfolio-item h3 {
@@ -209,4 +215,25 @@ FOR THE HOME PAGE SETUP
   font-size: 1.1rem;
   font-weight: bold;
   color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-image {
+    margin: 0 0 20px 0;
+  }
+
+  .portfolio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-item {
+    max-width: 100%;
+  }
 }
