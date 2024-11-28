@@ -17,7 +17,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
-h1 { font-size: 2.5rem; /* Increased to 40px */ }
+h1 { 
+  text-align: center; /* Centers text horizontally */
+  font-size: 2.5rem; /* Maintains the increased size */
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
 h2 { font-size: 2rem;   /* Increased to 32px */ }
 h3 { font-size: 1.75rem; /* Increased to 28px */ }
 h4 { font-size: 1.5rem; /* Increased to 24px */ }
@@ -46,7 +51,7 @@ a:hover, a:focus {
 
 /* Setting up the Lists. */
 ul, ol {
-  margin-left: 20px;
+  margin-left: 40px;
   padding-left: 0;
 }
 
