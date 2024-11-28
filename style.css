@@ -1,6 +1,8 @@
 html {
   font-size: 100%; /* Ensures that 1rem = 16px by default */
   background-color: #f2f2f2; /* Light gray background */
+
+  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
 }
 
 body {
