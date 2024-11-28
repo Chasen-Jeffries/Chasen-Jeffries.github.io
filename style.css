@@ -6,18 +6,15 @@ html {
 body {
   font-family: 'Roboto', sans-serif; /* Sets Roboto as the default font */
   font-size: 1rem; /* Increased base font size (16px) */
-  /* font-weight: bold;  Makes all text bold by default */
   color: #000000; /* Dark gray text color for better readability */
   margin: 0; /* Removes default margin */
-  padding: 0 100px; /* Adds padding of 100px on the left and right */
+  padding: 0; /* Removed padding to allow for full-width sections */
 }
-
 
 /* Setting up the Header Sizes */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  /* font-weight: bold; Ensures headings are bold */
 }
 
 h1 { font-size: 2.5rem; /* Increased to 40px */ }
@@ -26,7 +23,6 @@ h3 { font-size: 1.75rem; /* Increased to 28px */ }
 h4 { font-size: 1.5rem; /* Increased to 24px */ }
 h5 { font-size: 1.25rem; /* Increased to 20px */ }
 h6 { font-size: 1rem;   /* Matches body text */ }
-
 
 /* Setting up the Paragraphs */
 p {
@@ -39,8 +35,8 @@ p {
 a {
   color: #0066cc; /* Set your preferred link color */
   text-decoration: none;
-  font-size: inherit; /* Inherits font size from parent */
-  font-weight: inherit; /* Inherits boldness from parent */
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 a:hover, a:focus {
@@ -58,22 +54,20 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* Setting up the Buttons.     Is this necessary? */
+/* Setting up the Buttons. */
 button {
   background-color: #0066cc;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 1rem; /* Matches global size */
-  /* font-weight: bold; Ensures buttons are bold */
+  font-size: 1rem;
   border-radius: 5px;
 }
 
 button:hover {
   background-color: #004499;
 }
-
 
 /* Setting up the Images. */
 img {
@@ -83,21 +77,21 @@ img {
 
 /* Setting up the Main Menu. */
 .main-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: normal;
-    justify-content: normal;
-    align-items: flex-end;
-    border-bottom: 2px solid #000;
-    background-color: transparent;
-    height: 60px;
-    box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: flex-end;
+  border-bottom: 2px solid #000;
+  background-color: transparent;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 0 100px; /* Padding applied specifically here */
 }
-
 
 /* Individual list items */
 .main-menu li {
@@ -129,12 +123,6 @@ img {
   margin-right: 20px; /* Adds space between "Work" and "About" links */
 }
 
-
-
-/***********************
-FOR THE HOME PAGE SETUP
-***********************/
-
 /* Fullscreen Background */
 .fullscreen-bg {
   position: fixed;
@@ -160,33 +148,24 @@ FOR THE HOME PAGE SETUP
   padding: 0; /* Removes unnecessary padding for the background section */
 }
 
-
 /* Content Section */
-/* Styles specifically for #content to manage visibility based on sections */
 #content {
-  position: relative; /* Ensures positioning context */
+  position:relative; /* Ensures positioning context */
   width: 100%; /* Ensures the container takes full width of #content */
   margin-top: 100vh; /* Keeps it below the viewport initially */
   background-color: #f2f2f2; /* Uniform background color */
-  padding: 20px 0; /* Padding for content spacing.  */
-  box-sizing: border-box; /* Includes padding in width calculation */  
-
-  /*
-  width: calc(100vw + 100px); 
-  margin-left: calc(-100px); Counteracts the body's left padding */
-
+  padding: 20px 0; /* Padding for content spacing. */
+  box-sizing: border-box; /* Includes padding in width calculation */
 }
 
-/* General container within #content */
 #content .container {
   width: 100%; /* Ensures the container takes full width of #content */
   max-width: none; /* Maximum width for centered content */
-  margin: 0 auto; /* Center the container horizontally */
+  margin: 0; /* Center the container horizontally */
   padding: 0; /* Padding on the sides */
-  box-sizing: border-box; /* Includes padding in the width calculation, if padding is needed. added */
+  box-sizing: border-box; /* Includes padding in the width calculation */
 }
 
-/* Specific sections visibility */
 #Home, #Work, #About {
   display: none; /* Hide all sections by default */
 }
@@ -200,14 +179,12 @@ html:not(:target) #Home {
   display: block;
 }
 
-
 /* Intro Section (Picture and Bio) */
 .intro {
   display: flex;
   justify-content: center; /* Ensures content is centered within the container */
   align-items: center;
-  /* This will help in centering the content horizontally.  justify-content: space-around; */
-  padding: 20px; /* Adjust padding as needed. 40px 20px */
+  padding: 20px 100px; /* Adjust padding as needed, applied here specifically */
   background-color: #f2f2f2; /* Light gray background for the intro section */
 }
 
@@ -215,7 +192,6 @@ html:not(:target) #Home {
   flex: 0 0 40%; /* flex-grow is 0, flex-shrink is 0, flex-basis is 40% */
   max-width: 40%; /* Limits width to 40% of its container to keep it on the left */
   margin-right: 5%; /* Margin to ensure symmetry */
-
 }
 
 .profile-image {
@@ -242,7 +218,7 @@ html:not(:target) #Home {
   margin-top: 20px; /* Space from the previous section */
   border-top: 5px solid black; /* Thick black line as a divider */
   background-color: #f2f2f2; /* Light gray background maintained */
-  
+  padding: 40px 100px; /* Specific padding for this section */
 }
 
 .portfolio-item {
