@@ -73,7 +73,7 @@ li {
 button {
   background-color: #8B4513; /* Saddle Brown, a luxurious shade of brown */
   color: white; /* White text for contrast */
-  border: 3px solid #FFFFFF; /* White border, slightly thicker for visibility */
+  border: 3px solid #808080; /* White border, slightly thicker for visibility */
   padding: 30px 60px; /* Doubled padding for a larger button */
   font-size: 1.5rem; /* Increased font size for better readability */
   border-radius: 10px; /* Rounded corners */
@@ -81,14 +81,23 @@ button {
   text-decoration: none; /* Removes underline from links */
   margin: 20px; /* More space around the buttons */
   transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Larger initial shadow for a more pronounced effect */
 }
 
 /* Hover and Focus Styles for Buttons */
-button:hover, button:focus {
+button:hover {
   background-color: #A0522D; /* Sienna, a slightly lighter brown for hover/focus */
   border-color: #E0E0E0; /* Light gray border on hover/focus for a gentle contrast */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.75); /* Even larger and darker shadow for hover/focus */
+  animation: hoverEffect 2s forwards; /* Animation for temporary hover effect */
+}
+
+/* Keyframes for hover effect */
+@keyframes hoverEffect {
+  0% {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.75);
+  }
+  100% {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Revert to initial shadow after 2 seconds */
+  }
 }
 
 /* Active Styles for Buttons */
