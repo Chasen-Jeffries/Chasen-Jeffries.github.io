@@ -71,22 +71,22 @@ li {
 
 /* Individual Buttons */
 button { /* Direct styling for button elements */
-  background-color: #0066cc; /* Blue background color */
+  background-color: #000000; /* Black background color */
   color: white; /* White text */
-  border: 2px solid transparent; /* Transparent border that can change on hover */
-  padding: 10px 20px; /* Padding around the text */
-  font-size: 1rem; /* Font size */
-  border-radius: 5px; /* Rounded corners */
+  border: 2px solid #FFFFFF; /* White border */
+  padding: 15px 30px; /* Increased padding for bigger buttons */
+  font-size: 1.2rem; /* Increased font size */
+  border-radius: 8px; /* Slightly more rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
   text-decoration: none; /* Removes underline from links */
-  margin: 5px; /* Spacing between buttons */
+  margin: 10px; /* Increased spacing between buttons */
   transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for background and border color changes */
 }
 
 /* Hover and Focus Styles for Buttons */
 button:hover, button:focus {
-  background-color: #004499; /* Darker blue on hover/focus */
-  border-color: #fff; /* White border on hover/focus */
+  background-color: #333333; /* Dark grey on hover/focus for a subtle change */
+  border-color: #CCCCCC; /* Light grey border on hover/focus */
 }
 
 
