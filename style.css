@@ -230,8 +230,12 @@ html:not(:target) #Home {
 /* Portfolio Section */
 .portfolio {
   display: flex;
+  justify-content: space-between; /* Ensures there is space distributed between the items */
+  align-items: center; /* Aligns items vertically in the middle */
+  /*
   flex-wrap: wrap;
-  justify-content: center; /* Ensures content in the portfolio is centered. space-between */
+  justify-content: center;  Ensures content in the portfolio is centered. space-between */
+  
   padding: 40px 0; /* Adjust top and bottom padding to give space around the border */
   margin-top: 20px; /* Space from the previous section */
   border-top: 5px solid black; /* Thick black line as a divider */
@@ -240,8 +244,9 @@ html:not(:target) #Home {
 }
 
 .portfolio-item {
-  flex: 1 1 300px; /* Example flex-basis for responsiveness */
+  flex: 1; /* Example flex-basis for responsiveness. 1 1 300px */
   margin: 20px; /* Ensure margins do not push content off-center */
+  text-align: center; /* Centers the content of each portfolio item */
   box-sizing: border-box; /* Includes margins and padding in the width */
 }
 
