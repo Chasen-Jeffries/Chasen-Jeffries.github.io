@@ -71,8 +71,8 @@ li {
 
 /* Individual Buttons */
 button {
-  background-color: #D1EBDB; /* a luxurious shade of brown */
-  color: #192524; /*  text for contrast */
+  background-color: #D0D5CE; /* a luxurious shade of brown */
+  color: black; /*  text for contrast */
   border: 3px solid #000; /* Black border, slightly thicker for visibility */
   padding: 30px 60px; /* Doubled padding for a larger button */
   font-size: 1.5rem; /* Increased font size for better readability */
@@ -85,7 +85,7 @@ button {
 
 /* Hover and Focus Styles for Buttons */
 button:hover {
-  background-color: #D1EBDB; /* Sienna, a slightly lighter brown for hover/focus */
+  background-color: #D0D5CE; /* Sienna, a slightly lighter brown for hover/focus */
   border-color: #E0E0E0; /* Light gray border on hover/focus for a gentle contrast */
   animation: hoverEffect 2s forwards; /* Animation for temporary hover effect */
 }
