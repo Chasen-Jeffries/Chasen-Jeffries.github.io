@@ -230,7 +230,7 @@ html:not(:target) #Home {
 /* Portfolio Section */
 .portfolio {
   display: flex;
-  justify-content: space-between; /* Ensures there is space distributed between the items */
+  justify-content: space-around; /* Distributes items evenly with space around them */
   align-items: center; /* Aligns items vertically in the middle */
   /*
   flex-wrap: wrap;
@@ -246,15 +246,11 @@ html:not(:target) #Home {
 .portfolio-item {
   flex: 1; /* Example flex-basis for responsiveness. 1 1 300px */
   margin: 20px; /* Ensure margins do not push content off-center */
-  position: relative; /* Allows for precise positioning */
-  text-align: center; /* Centers the content of each portfolio item */
-  box-sizing: border-box; /* Includes margins and padding in the width */
-}
 
-.portfolio-item:nth-child(2) {
-  /* Move the second item to the exact center */
-  transform: translateX(-50%); /* Shifts the element leftwards by half its width */
-  left: 50%; /* Position the left edge of the element at the center */
+  display: flex;  /* Makes the portfolio item a flex container */
+  justify-content: center;  /* Centers the content of each portfolio item */
+  text-align: center;  /* Ensures text inside the flex item is centered */
+  min-width: 0;  /* Prevents flex items from growing beyond the available space */
 }
 
 .portfolio-item img {
@@ -290,14 +286,10 @@ html:not(:target) #Home {
 
   .portfolio {
     flex-direction: column;
-    align-items: center;
   }
-
+  
   .portfolio-item {
-    max-width: 100%;
-    margin: 10px 0;
-    /* Reset transformations on smaller screens */
-    transform: none;
-    left: auto;
+    width: 100%;  /* Makes each item take full width on smaller screens */
+    margin: 10px 0;  /* Adjusts margin for stacking */
   }
 }
