@@ -246,8 +246,15 @@ html:not(:target) #Home {
 .portfolio-item {
   flex: 1; /* Example flex-basis for responsiveness. 1 1 300px */
   margin: 20px; /* Ensure margins do not push content off-center */
+  position: relative; /* Allows for precise positioning */
   text-align: center; /* Centers the content of each portfolio item */
   box-sizing: border-box; /* Includes margins and padding in the width */
+}
+
+.portfolio-item:nth-child(2) {
+  /* Move the second item to the exact center */
+  transform: translateX(-50%); /* Shifts the element leftwards by half its width */
+  left: 50%; /* Position the left edge of the element at the center */
 }
 
 .portfolio-item img {
@@ -288,5 +295,9 @@ html:not(:target) #Home {
 
   .portfolio-item {
     max-width: 100%;
+    margin: 10px 0;
+    /* Reset transformations on smaller screens */
+    transform: none;
+    left: auto;
   }
 }
