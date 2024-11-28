@@ -204,6 +204,7 @@ html:not(:target) #Home {
 /* Intro Section (Picture and Bio) */
 .intro {
   display: flex;
+  justify-content: center; /* Ensures content is centered within the container */
   align-items: center;
   /* This will help in centering the content horizontally.  justify-content: space-around; */
   padding: 20px; /* Adjust padding as needed. 40px 20px */
@@ -213,7 +214,8 @@ html:not(:target) #Home {
 .intro-image {
   flex: 0 0 40%; /* flex-grow is 0, flex-shrink is 0, flex-basis is 40% */
   max-width: 40%; /* Limits width to 40% of its container to keep it on the left */
-  margin-right: 10%; /* Adds a margin to the right to push it further from center */
+  margin-right: 5%; /* Margin to ensure symmetry */
+
 }
 
 .profile-image {
@@ -223,8 +225,9 @@ html:not(:target) #Home {
 }
 
 .intro-bio {
-  flex: 1; /* Flex-grow is 0, flex-shrink is 1, flex-basis is 45% */
+  flex: 0 0 40%; /* Sets the bio to take up 40% of the flex container */
   text-align: left; /* Aligns the text left within its flex item */
+  margin-left: 5%; /* Margin to ensure symmetry */
   font-size: 1.2rem;
   line-height: 1.6;
   color: #000; /* Black text for contrast */
@@ -275,14 +278,11 @@ html:not(:target) #Home {
   }
 
   .intro-image, .intro-bio {
-    padding: 0 5%; /* Adds padding to each side */
+    margin-right: 0; /* Resets right margin */
+    margin-left: 0;  /* Resets left margin */
+    max-width: 80%; /* Adjusts max width for better fit */
   }
   
-  /* Removes the padding on smaller screens 
-  .intro-image {
-    padding-right: 0; 
-  }
-  */
 
   .portfolio {
     flex-direction: column;
