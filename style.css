@@ -283,7 +283,7 @@ html:not(:target) #Home {
 #Work {
   display: none; /* Initially hidden, shown when targeted */
   background-color: #f2f2f2; /* A different background color for distinction */
-  padding: 20px 100px; /* Vertical and horizontal padding */
+  padding: 20px 50px; /* Vertical and horizontal padding */
   box-sizing: border-box; /* Includes padding in the width calculation */
 }
 
@@ -294,7 +294,7 @@ html:not(:target) #Home {
 #Work .container {
   max-width: 1200px; /* Maximum width for the content */
   margin: 0 auto; /* Centers the content within the section */
-  background-color: #22311d; /* Background color for the content area */
+  background-color: #43655a; /* Background color for the content area */
   padding: 20px; /* Padding inside the container for content */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
 }
