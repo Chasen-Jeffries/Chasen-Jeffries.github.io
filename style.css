@@ -79,7 +79,7 @@ img {
 .main-menu {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 100px; /* Padding applied specifically here */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -90,7 +90,6 @@ img {
   background-color: transparent;
   height: 60px;
   box-sizing: border-box;
-  padding: 0 100px; /* Padding applied specifically here */
 }
 
 /* Individual list items */
