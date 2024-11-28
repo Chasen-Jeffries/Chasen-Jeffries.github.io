@@ -210,6 +210,18 @@ html:not(:target) #Home {
   align-items: center;
   padding: 20px 100px; /* Adjust padding as needed, applied here specifically */
   background-color: #f2f2f2; /* Light gray background for the intro section */
+
+  position: relative; /* Required for positioning the pseudo-element */
+}
+
+.intro:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50px; /* Align with the padding of the parent */
+  right: 50px; /* Align with the padding of the parent */
+  height: 2px; /* Thickness of the line */
+  background-color: #000; /* Color of the line */
 }
 
 .intro-image {
@@ -240,7 +252,7 @@ html:not(:target) #Home {
   align-items: flex-start; /* Aligns items at the top */
   padding: 40px 100px; /* Specific padding for this section */
   margin-top: 20px; /* Space from the previous section */
-  border-top: 5px solid black; /* Thick black line as a divider */
+  /* border-top: 5px solid black;  Thick black line as a divider */
   background-color: #f2f2f2; /* Light gray background maintained */
 }
 
