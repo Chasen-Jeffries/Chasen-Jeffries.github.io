@@ -70,7 +70,7 @@ li {
 }
 
 /* Individual Buttons */
-button { /* Direct styling for button elements */
+button {
   background-color: #8B4513; /* Saddle Brown, a luxurious shade of brown */
   color: white; /* White text for contrast */
   border: 3px solid #FFFFFF; /* White border, slightly thicker for visibility */
@@ -80,14 +80,22 @@ button { /* Direct styling for button elements */
   cursor: pointer; /* Pointer cursor on hover */
   text-decoration: none; /* Removes underline from links */
   margin: 20px; /* More space around the buttons */
-  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
 }
 
 /* Hover and Focus Styles for Buttons */
 button:hover, button:focus {
   background-color: #A0522D; /* Sienna, a slightly lighter brown for hover/focus */
   border-color: #E0E0E0; /* Light gray border on hover/focus for a gentle contrast */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
 }
+
+/* Active Styles for Buttons */
+button:active {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.75); /* Brighter, more noticeable shadow for active state */
+  transition: box-shadow 1s ease-out; /* Shadow fades out over 1 second */
+}
+
 
 
 /* Setting up the Images. */
