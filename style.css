@@ -60,7 +60,7 @@ li {
 }
 
 /* Setting up the Buttons. */
-button {
+.button, a.button {  /* Adding 'a.button' allows anchor tags to use the same styles */
   background-color: #0066cc;
   color: white;
   border: none;
@@ -68,10 +68,15 @@ button {
   cursor: pointer;
   font-size: 1rem;
   border-radius: 5px;
+  text-align: center; /* Ensures text within buttons is centered */
+  display: inline-block; /* Necessary for padding and margin to work on anchor tags */
+  text-decoration: none; /* Removes underline from anchor tags */
+  margin: 5px; /* Optional: Adds some space around buttons */
 }
 
-button:hover {
-  background-color: #004499;
+
+.button:hover, a.button:hover {
+  background-color: #004499; /* Darker shade on hover */
 }
 
 /* Setting up the Images. */
