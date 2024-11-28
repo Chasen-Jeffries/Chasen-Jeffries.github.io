@@ -71,22 +71,22 @@ li {
 
 /* Individual Buttons */
 button { /* Direct styling for button elements */
-  background-color: #000000; /* Black background color */
-  color: white; /* White text */
-  border: 2px solid #FFFFFF; /* White border */
-  padding: 15px 30px; /* Increased padding for bigger buttons */
-  font-size: 1.2rem; /* Increased font size */
-  border-radius: 8px; /* Slightly more rounded corners */
+  background-color: #8B4513; /* Saddle Brown, a luxurious shade of brown */
+  color: white; /* White text for contrast */
+  border: 3px solid #FFFFFF; /* White border, slightly thicker for visibility */
+  padding: 30px 60px; /* Doubled padding for a larger button */
+  font-size: 1.5rem; /* Increased font size for better readability */
+  border-radius: 10px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
   text-decoration: none; /* Removes underline from links */
-  margin: 10px; /* Increased spacing between buttons */
-  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for background and border color changes */
+  margin: 20px; /* More space around the buttons */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
 }
 
 /* Hover and Focus Styles for Buttons */
 button:hover, button:focus {
-  background-color: #333333; /* Dark grey on hover/focus for a subtle change */
-  border-color: #CCCCCC; /* Light grey border on hover/focus */
+  background-color: #A0522D; /* Sienna, a slightly lighter brown for hover/focus */
+  border-color: #E0E0E0; /* Light gray border on hover/focus for a gentle contrast */
 }
 
 
