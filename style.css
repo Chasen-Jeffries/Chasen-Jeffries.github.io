@@ -294,7 +294,7 @@ html:not(:target) #Home {
 #Work .container {
   max-width: 1200px; /* Maximum width for the content */
   margin: 0 auto; /* Centers the content within the section */
-  background-color: #43655a; /* Background color for the content area */
+  background-color: #c2d6d1; /* Background color for the content area */
   padding: 20px; /* Padding inside the container for content */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
 }
