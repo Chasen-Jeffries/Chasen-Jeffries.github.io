@@ -242,9 +242,8 @@ html:not(:target) #Home {
 .portfolio-item {
   flex: 1; /* Example flex-basis for responsiveness. 1 1 300px */
   margin: 20px; /* Ensure margins do not push content off-center */
-
   display: flex;  /* Makes the portfolio item a flex container */
-  justify-content: center;  /* Centers the content of each portfolio item */
+  flex-direction: column; /* Stacks children (image and title) vertically */
   align-items: center; /* Centers the items horizontally */
   text-align: center;  /* Ensures text inside the flex item is centered */
   min-width: 250px; /* Minimum width to prevent too much squeezing on smaller views */
