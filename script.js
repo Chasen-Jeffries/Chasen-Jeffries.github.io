@@ -1,23 +1,25 @@
-// jQuery block for handling hash-based navigation
 (function ($) {
-  // This function runs every time the window loads or the hash changes
-  $(window).on('load hashchange', function() {
-    // Hide all content regions initially
+  $(window).on('load hashchange', function(){
+    // Hide all content regions
     $('.content-region').hide();
 
-    // Get the current hash or use the first menu item if no hash
-    var region = location.hash || $('.main-menu a:first').attr('href');
+    // Get the current hash or default to the first menu link if no hash
+    var region = location.hash.toString() || $('.main-menu a:first').attr('href');
     
-    // Show the region specified in the hash
+    // Show the region that matches the hash
     $(region).show();
 
-    // Remove 'active' class from all and then add to the current item
+    // Highlight the menu link associated with this region
     $('.main-menu a').removeClass('active');
-    $('.main-menu a[href="' + region + '"]').addClass('active');
+    $('.main-menu a[href="'+ region +'"]').addClass('active');
+
+    // Check if the hash corresponds to 'Professional' or 'Academia' and scroll to it
+    if (region === '#professional-section' || region === '#academia-section') {
+      scrollToSection(region.substring(1)); // Remove the hash and pass the ID
+    }
   });
 })(jQuery);
 
-// Plain JavaScript for smooth scrolling
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   if (section) {
