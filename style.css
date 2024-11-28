@@ -232,24 +232,17 @@ html:not(:target) #Home {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Ensures content in the portfolio is centered. space-between */
-  /* gap: 20px;  
-  max-width: 1200px;
-  margin: 0 auto;
-  */
-  padding: 0; /* 60px 20px; */
-  background-color: #f2f2f2; /* Light gray background for the intro section */
+  padding: 40px 0; /* Adjust top and bottom padding to give space around the border */
+  margin-top: 20px; /* Space from the previous section */
+  border-top: 5px solid black; /* Thick black line as a divider */
+  background-color: #f2f2f2; /* Light gray background maintained */
+  
 }
 
 .portfolio-item {
   flex: 1 1 300px; /* Example flex-basis for responsiveness */
   margin: 20px; /* Ensure margins do not push content off-center */
   box-sizing: border-box; /* Includes margins and padding in the width */
-  /* 
-  flex: 1;
-  min-width: 250px; 
-  max-width: 300px;  
-  text-align: center;
-  */
 }
 
 .portfolio-item img {
