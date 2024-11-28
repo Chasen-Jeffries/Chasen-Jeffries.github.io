@@ -168,7 +168,7 @@ FOR THE HOME PAGE SETUP
   width: 100%; /* Ensures the container takes full width of #content */
   margin-top: 100vh; /* Keeps it below the viewport initially */
   background-color: #f2f2f2; /* Uniform background color */
-  padding: 20px 0; /* Padding for content spacing. */
+  padding: 0; /* Padding for content spacing. 20px 0 */
   box-sizing: border-box; /* Includes padding in width calculation */  
 
   /*
