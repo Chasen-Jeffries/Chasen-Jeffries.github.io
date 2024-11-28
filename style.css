@@ -180,9 +180,9 @@ FOR THE HOME PAGE SETUP
 /* General container within #content */
 #content .container {
   width: 100%; /* Ensures the container takes full width of #content */
-  max-width: 1200px; /* Maximum width for centered content */
+  max-width: none; /* Maximum width for centered content */
   margin: 0 auto; /* Center the container horizontally */
-  padding: 0 20px; /* Padding on the sides */
+  padding: 0; /* Padding on the sides */
   box-sizing: border-box; /* Includes padding in the width calculation, if padding is needed. added */
 }
 
