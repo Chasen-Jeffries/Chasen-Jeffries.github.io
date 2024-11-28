@@ -214,11 +214,10 @@ html:not(:target) #Home {
   display: flex;
   justify-content: space-between; /* Adjust to space-around if items need more space */
   align-items: flex-start; /* Aligns items at the top */
-  padding: 40px 0; /* Adjust top and bottom padding to give space around the border */
+  padding: 40px 100px; /* Specific padding for this section */
   margin-top: 20px; /* Space from the previous section */
   border-top: 5px solid black; /* Thick black line as a divider */
   background-color: #f2f2f2; /* Light gray background maintained */
-  padding: 40px 100px; /* Specific padding for this section */
 }
 
 .portfolio-item {
