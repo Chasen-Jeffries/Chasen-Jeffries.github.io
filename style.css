@@ -85,7 +85,7 @@ button {
 
 /* Hover and Focus Styles for Buttons */
 button:hover {
-  background-color: #A0522D; /* Sienna, a slightly lighter brown for hover/focus */
+  background-color: #d9b6a3; /* Sienna, a slightly lighter brown for hover/focus */
   border-color: #E0E0E0; /* Light gray border on hover/focus for a gentle contrast */
   animation: hoverEffect 2s forwards; /* Animation for temporary hover effect */
 }
@@ -332,7 +332,7 @@ html:not(:target) #Home {
 #Work .container {
   max-width: calc(100% - 300px); /* Adjusts max-width to be slightly less than the full width minus padding */
   margin: 0 auto; /* Centers the content within the section */
-  background-color: #c6c6d2; /* Background color for the content area. #dcc3b5 */
+  background-color: #d88b79; /* Background color for the content area. #c6c6d2 */
   padding: 20px; /* Padding inside the container for content */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
   border: 4px solid black; /* Adds a black border with a thickness of 2px */
