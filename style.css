@@ -283,7 +283,7 @@ html:not(:target) #Home {
 #Work {
   display: none; /* Initially hidden, shown when targeted */
   background-color: #f2f2f2; /* A different background color for distinction */
-  padding: 20px 50px; /* Vertical and horizontal padding */
+  padding: 20px 0; /* Vertical and horizontal padding */
   box-sizing: border-box; /* Includes padding in the width calculation */
 }
 
