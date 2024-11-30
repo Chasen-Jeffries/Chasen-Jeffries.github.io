@@ -1,6 +1,6 @@
 html {
   font-size: 100%; /* Ensures that 1rem = 16px by default */
-  background-color: #f7f7f7; /* Light gray background */
+  background-color: #f2f2f2; /* Light gray background */
 
   scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
 }
@@ -215,7 +215,7 @@ img {
   position:relative; /* Ensures positioning context */
   width: 100%; /* Ensures the container takes full width of #content */
   margin-top: 100vh; /* Keeps it below the viewport initially */
-  background-color: #f7f7f7; /* Uniform background color */
+  background-color: #f2f2f2; /* Uniform background color */
   padding: 20px 0; /* Padding for content spacing. */
   box-sizing: border-box; /* Includes padding in width calculation */
 }
@@ -247,7 +247,7 @@ html:not(:target) #Home {
   justify-content: center; /* Ensures content is centered within the container */
   align-items: center;
   padding: 20px 100px; /* Adjust padding as needed, applied here specifically */
-  background-color: #f7f7f7; /* Light gray background for the intro section */
+  background-color: #f2f2f2; /* Light gray background for the intro section */
   position: relative; /* Required for positioning the pseudo-element */
 }
 
@@ -289,7 +289,7 @@ html:not(:target) #Home {
   align-items: flex-start; /* Aligns items at the top */
   padding: 40px 100px; /* Specific padding for this section */
   margin-top: 20px; /* Space from the previous section */
-  background-color: #f7f7f7; /* Light gray background maintained */
+  background-color: #f2f2f2; /* Light gray background maintained */
 }
 
 .portfolio-item {
@@ -320,7 +320,7 @@ html:not(:target) #Home {
 /* Work Page */
 #Work {
   display: none; /* Initially hidden, shown when targeted */
-  background-color: #f7f7f7; /* A different background color for distinction. #f2f2f2 */
+  background-color: #f2f2f2; /* A different background color for distinction. #f2f2f2 */
   padding: 100px 100px; /* Vertical and horizontal padding */
   box-sizing: border-box; /* Includes padding in the width calculation */
 }
