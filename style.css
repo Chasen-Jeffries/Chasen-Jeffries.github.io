@@ -137,6 +137,24 @@ button:active {
   margin-top: 20px; /* Additional spacing from content above */
 }
 
+.cv-button {
+  background-color: #A8C3C1; /* Adjust the color to fit your design */
+  color: black; /* Text color */
+  border: 3px solid #000; /* Black border, slightly thicker for visibility */
+  padding: 30px 60px; /* Doubled padding for a larger button */
+  font-size: 1.5rem; /* Increased font size for better readability */
+  text-decoration: none; /* Removes underline from the link */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: inline-block; /* Needed for padding and margins to work */
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.cv-button:hover {
+  background-color: #004499; /* Darker shade on hover */
+}
+
+
 
 /* Setting up the Images. */
 img {
