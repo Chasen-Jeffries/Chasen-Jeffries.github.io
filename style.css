@@ -1,6 +1,6 @@
 html {
   font-size: 100%; /* Ensures that 1rem = 16px by default */
-  background-color: #F4F7FA; /* Light gray background */
+  background-color: #F8F4E6; /* Light gray background */
 
   scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
 }
@@ -71,7 +71,7 @@ li {
 
 /* Individual Buttons */
 button {
-  background-color: #D3DDE6; /* a luxurious shade of brown */
+  background-color: #E2D1B0; /* a luxurious shade of brown */
   color: black; /*  text for contrast */
   border: 3px solid #000; /* Black border, slightly thicker for visibility */
   padding: 30px 60px; /* Doubled padding for a larger button */
@@ -85,7 +85,7 @@ button {
 
 /* Hover and Focus Styles for Buttons */
 button:hover {
-  background-color: #D3DDE6; /* Sienna, a slightly lighter brown for hover/focus.  D0D5CE  */
+  background-color: #E2D1B0; /* Sienna, a slightly lighter brown for hover/focus.  D0D5CE  */
   border-color: #d9d9d9; /* Light gray border on hover/focus for a gentle contrast.  E0E0E0  */
   animation: hoverEffect 2s forwards; /* Animation for temporary hover effect */
 }
@@ -215,7 +215,7 @@ img {
   position:relative; /* Ensures positioning context */
   width: 100%; /* Ensures the container takes full width of #content */
   margin-top: 100vh; /* Keeps it below the viewport initially */
-  background-color: #F4F7FA; /* Uniform background color */
+  background-color: #F8F4E6; /* Uniform background color */
   padding: 20px 0; /* Padding for content spacing. */
   box-sizing: border-box; /* Includes padding in width calculation */
 }
@@ -247,7 +247,7 @@ html:not(:target) #Home {
   justify-content: center; /* Ensures content is centered within the container */
   align-items: center;
   padding: 20px 100px; /* Adjust padding as needed, applied here specifically */
-  background-color: #F4F7FA; /* Light gray background for the intro section */
+  background-color: #F8F4E6; /* Light gray background for the intro section */
   position: relative; /* Required for positioning the pseudo-element */
 }
 
@@ -289,7 +289,7 @@ html:not(:target) #Home {
   align-items: flex-start; /* Aligns items at the top */
   padding: 40px 100px; /* Specific padding for this section */
   margin-top: 20px; /* Space from the previous section */
-  background-color: #F4F7FA; /* Light gray background maintained */
+  background-color: #F8F4E6; /* Light gray background maintained */
 }
 
 .portfolio-item {
@@ -320,7 +320,7 @@ html:not(:target) #Home {
 /* Work Page */
 #Work {
   display: none; /* Initially hidden, shown when targeted */
-  background-color: #F4F7FA; /* A different background color for distinction. #F4F7FA */
+  background-color: #F8F4E6; /* A different background color for distinction. #F8F4E6 */
   padding: 100px 100px; /* Vertical and horizontal padding */
   box-sizing: border-box; /* Includes padding in the width calculation */
 }
@@ -332,7 +332,7 @@ html:not(:target) #Home {
 #Work .container {
   max-width: calc(100% - 300px); /* Adjusts max-width to be slightly less than the full width minus padding */
   margin: 0 auto; /* Centers the content within the section */
-  background-color: #D3DDE6; /* Background color for the content area. #c6c6d2 */
+  background-color: #E2D1B0; /* Background color for the content area. #c6c6d2 */
   padding: 20px; /* Padding inside the container for content */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
   border: 4px solid black; /* Adds a black border with a thickness of 2px */
