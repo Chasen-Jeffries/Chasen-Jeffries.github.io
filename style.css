@@ -62,9 +62,10 @@ li {
 }
 
 
-.two-column-list {
+.two-column-list {  
   list-style: none; /* Removes default list styling */
-  padding-left: 0; /* Removes default padding */
+  margin: 0; /* Removes any default margin */
+  padding: 0; /* Removes default padding */
 }
 
 .two-column-list li {
