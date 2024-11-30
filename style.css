@@ -61,6 +61,29 @@ li {
   margin-bottom: 0.5rem;
 }
 
+
+.two-column-list {
+  list-style: none; /* Removes default list styling */
+  padding-left: 0; /* Removes default padding */
+}
+
+.two-column-list li {
+  display: flex; /* Enables flexbox layout */
+  justify-content: space-between; /* Distributes space between columns */
+  align-items: center; /* Aligns items vertically */
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.two-column-list li .left, .two-column-list li .right {
+  flex: 1; /* Allows both columns to grow equally */
+  padding: 5px; /* Padding for spacing */
+}
+
+.two-column-list li .right {
+  text-align: right; /* Right aligns the right column */
+}
+
+
 /* Setting up the Buttons. */
 /* Scroll Buttons Container */
 .button-container {
