@@ -130,6 +130,29 @@ button:active {
   transition: box-shadow 1s ease-out; /* Shadow fades out over 1 second */
 }
 
+/* Making CV Button */
+.cv-button-container {
+  text-align: center; /* Center-aligns the button */
+  padding: 20px; /* Adds padding around the button for spacing */
+  margin-top: 20px; /* Additional spacing from content above */
+}
+
+.cv-button {
+  background-color: #0066cc; /* Adjust the color to fit your design */
+  color: white; /* Text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 1rem; /* Font size */
+  text-decoration: none; /* Removes underline from the link */
+  border-radius: 5px; /* Rounded corners for the button */
+  display: inline-block; /* Needed for padding and margins to work */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.cv-button:hover {
+  background-color: #004499; /* Darker shade on hover */
+}
+
 
 /* Setting up the Images. */
 img {
