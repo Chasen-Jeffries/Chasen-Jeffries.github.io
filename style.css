@@ -71,7 +71,7 @@ li {
 
 /* Individual Buttons */
 button {
-  background-color: #D0D5CE; /* a luxurious shade of brown */
+  background-color: #E0E0E0; /* a luxurious shade of brown */
   color: black; /*  text for contrast */
   border: 3px solid #000; /* Black border, slightly thicker for visibility */
   padding: 30px 60px; /* Doubled padding for a larger button */
@@ -85,8 +85,8 @@ button {
 
 /* Hover and Focus Styles for Buttons */
 button:hover {
-  background-color: #D0D5CE; /* Sienna, a slightly lighter brown for hover/focus */
-  border-color: #E0E0E0; /* Light gray border on hover/focus for a gentle contrast */
+  background-color: #E0E0E0; /* Sienna, a slightly lighter brown for hover/focus.  D0D5CE  */
+  border-color: #d9d9d9; /* Light gray border on hover/focus for a gentle contrast.  E0E0E0  */
   animation: hoverEffect 2s forwards; /* Animation for temporary hover effect */
 }
 
@@ -332,7 +332,7 @@ html:not(:target) #Home {
 #Work .container {
   max-width: calc(100% - 300px); /* Adjusts max-width to be slightly less than the full width minus padding */
   margin: 0 auto; /* Centers the content within the section */
-  background-color: #D0D5CE; /* Background color for the content area. #c6c6d2 */
+  background-color: #E0E0E0; /* Background color for the content area. #c6c6d2 */
   padding: 20px; /* Padding inside the container for content */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
   border: 4px solid black; /* Adds a black border with a thickness of 2px */
