@@ -336,6 +336,16 @@ html:not(:target) #Home {
   min-width: 250px; /* Minimum width to prevent too much squeezing on smaller views */
 }
 
+.portfolio-item::after {
+  content: '';
+  position: absolute;
+  bot: 0; /* Aligns the line at the top */
+  left: 50px;
+  right: 50px;
+  height: 4px; /* Thickness of the line */
+  background-color: #000; /* Black color for the line */
+}
+
 .portfolio-item img {
   width: 100%;
   max-width: 300px; /* Limits the image width to maintain design consistency */
@@ -407,7 +417,7 @@ html:not(:target) #Home {
 .top-portfolio-item::after {
   content: '';
   position: absolute;
-  bot: 10px; /* Aligns the line at the top */
+  bot: 10px; /* Aligns the line at the bot */
   left: 50px;
   right: 50px;
   height: 4px; /* Thickness of the line */
