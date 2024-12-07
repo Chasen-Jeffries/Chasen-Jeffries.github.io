@@ -326,16 +326,6 @@ html:not(:target) #Home {
   background-color: #F4F7FA; /* Light gray background maintained */
 }
 
-.portfolio:after {
-  content: '';
-  position: absolute;
-  bot: 0; /* Aligns the line at the top */
-  left: 50px;
-  right: 50px;
-  height: 4px; /* Thickness of the line */
-  background-color: #000; /* Black color for the line */
-}
-
 .portfolio-item {
   flex: 1; /* Example flex-basis for responsiveness. 1 1 300px */
   margin: 20px; /* Ensure margins do not push content off-center */
