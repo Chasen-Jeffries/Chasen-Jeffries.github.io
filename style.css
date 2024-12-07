@@ -404,6 +404,16 @@ html:not(:target) #Home {
   margin-bottom: 40px 100px;
 }
 
+.top-portfolio-item::after {
+  content: '';
+  position: absolute;
+  top: 0; /* Aligns the line at the top */
+  left: 50px;
+  right: 50px;
+  height: 4px; /* Thickness of the line */
+  background-color: #000; /* Black color for the line */
+}
+
 .top-portfolio-item .portfolio-image {
   width: 100%;
   max-width: 800px;
@@ -418,15 +428,7 @@ html:not(:target) #Home {
   color: #000;
 }
 
-.top-portfolio-item::after {
-  content: '';
-  position: absolute;
-  top: 0; /* Aligns the line at the top */
-  left: 50px;
-  right: 50px;
-  height: 4px; /* Thickness of the line */
-  background-color: #000; /* Black color for the line */
-}
+
 
 
 /* Responsive Design */
