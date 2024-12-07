@@ -383,7 +383,7 @@ html:not(:target) #Home {
   max-width: calc(100% - 300px); /* Adjusts max-width to be slightly less than the full width minus padding */
   margin: 0 auto; /* Centers the content within the section */
   background-color: #D3DDE6; /* Background color for the content area. #c6c6d2 */
-  padding: 20px; /* Padding inside the container for content */
+  padding: 40px; /* Padding inside the container for content */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
   border: 4px solid black; /* Adds a black border with a thickness of 2px */
 }
