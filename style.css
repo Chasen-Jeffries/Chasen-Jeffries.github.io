@@ -336,10 +336,10 @@ html:not(:target) #Home {
   min-width: 250px; /* Minimum width to prevent too much squeezing on smaller views */
 }
 
-.portfolio-item::after {
+.portfolio-item:after {
   content: '';
   position: absolute;
-  bot: 50px; /* Aligns the line at the top */
+  bot: 0; /* Aligns the line at the top */
   left: 50px;
   right: 50px;
   height: 4px; /* Thickness of the line */
