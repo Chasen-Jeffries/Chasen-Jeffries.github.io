@@ -393,13 +393,13 @@ html:not(:target) #Home {
 /* Portfolio Section */
 
 #Portfolio {
-  padding: 40px 0;
+  padding: 40px 100px;
   background-color: #F4F7FA;
 }
 
 .portfolio-container {
   background-color: #FFF;
-  padding: 40px 80px;
+  padding: 40px 100px;
   max-width: 1200px;
   margin: 0 auto;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
