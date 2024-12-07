@@ -336,7 +336,7 @@ html:not(:target) #Home {
   min-width: 250px; /* Minimum width to prevent too much squeezing on smaller views */
 }
 
-.portfolio-item::before {
+.portfolio-item::after {
   content: '';
   position: absolute;
   top: 0; /* Aligns the line at the top */
@@ -345,11 +345,6 @@ html:not(:target) #Home {
   height: 4px; /* Thickness of the line */
   background-color: #000; /* Black color for the line */
 }
-
-.portfolio-item:first-child::before {
-  display: none; /* Removes the line above the first portfolio item */
-}
-
 
 .portfolio-item img {
   width: 100%;
