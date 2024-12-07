@@ -407,7 +407,7 @@ html:not(:target) #Home {
 .top-portfolio-item::after {
   content: '';
   position: absolute;
-  bot: 0; /* Aligns the line at the top */
+  bot: 10px; /* Aligns the line at the top */
   left: 50px;
   right: 50px;
   height: 4px; /* Thickness of the line */
