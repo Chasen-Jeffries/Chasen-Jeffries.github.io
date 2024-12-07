@@ -164,23 +164,7 @@ img {
 }
 
 /* Setting up the Main Menu. */
-/*
-.main-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0 100px;  
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: normal;
-  justify-content: normal;
-  align-items: flex-end;
-  border-bottom: 2px solid #000;
-  background-color: transparent;
-  height: 60px;
-  box-sizing: border-box;
-}
-*/
+
 .main-menu {
   list-style: none;
   margin: 0;
@@ -350,6 +334,16 @@ html:not(:target) #Home {
   align-items: center; /* Centers the items horizontally */
   text-align: center;  /* Ensures text inside the flex item is centered */
   min-width: 250px; /* Minimum width to prevent too much squeezing on smaller views */
+}
+
+.portfolio-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000; /* Black line */
 }
 
 .portfolio-item img {
