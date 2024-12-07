@@ -434,6 +434,8 @@ html:not(:target) #Home {
   color: #000;
 }
 
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .intro, .portfolio-container {
