@@ -58,10 +58,6 @@ ul, ol {
   padding-left: 0;
 }
 
-strong + ul {
-    margin-top: 0; /* Remove the top margin directly following a strong tag */
-}
-
 li {
   margin-bottom: 0.5rem;
 }
