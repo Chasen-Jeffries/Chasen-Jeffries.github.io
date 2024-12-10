@@ -86,6 +86,11 @@ ul li div {
     display: none; /* Ensures it starts hidden */
 }
 
+/* Ensures hover works for span elements with inline color */
+ul li span[onclick]:hover {
+    text-decoration: underline; /* Underlines the text on hover */
+}
+
 .two-column-list {  
   list-style: none; /* Removes default list styling */
   margin: 0; /* Removes any default margin */
