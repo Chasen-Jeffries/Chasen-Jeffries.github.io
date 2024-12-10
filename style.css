@@ -345,7 +345,7 @@ html:not(:target) #Home {
   display: flex;
   justify-content: space-between; /* Adjust to space-around if items need more space */
   align-items: flex-start; /* Aligns items at the top */
-  padding: 20px 100px; /* Specific padding for this section */
+  padding: 10px 100px; /* Specific padding for this section */
   margin-top: 20px; /* Space from the previous section */
   background-color: #F4F7FA; /* Light gray background maintained */
 }
@@ -361,9 +361,17 @@ html:not(:target) #Home {
 }
 
 .portfolio-item img {
+ /* 
   width: 100%;
-  max-width: 300px; /* Limits the image width to maintain design consistency */
+  max-width: 300px; Limits the image width to maintain design consistency
   height: auto;
+  */
+  width: 200px; /* Adjust for desired square size */
+  height: 200px; /* Makes the image a square */
+  object-fit: cover; /* Ensures the image fills the square without distortion */
+  display: block; /* Ensures consistent spacing and alignment */
+  margin: 0 auto; /* Centers the image horizontally */
+  
   border-radius: 10px; /* Optional: Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
