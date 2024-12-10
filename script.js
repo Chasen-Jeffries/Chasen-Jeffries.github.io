@@ -26,3 +26,14 @@ function scrollToSection(sectionId) {
     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
+
+function toggleAbstract(abstractId) {
+    var element = document.getElementById(abstractId);
+    if (element.style.display === 'none' || element.style.display === '') {
+        element.style.display = 'block';
+        document.querySelector(`span[onclick="toggleAbstract('${abstractId}')"]`).innerHTML = 'Abstract &#9650;'; // Change to up arrow when open
+    } else {
+        element.style.display = 'none';
+        document.querySelector(`span[onclick="toggleAbstract('${abstractId}')"]`).innerHTML = 'Abstract &#9660;'; // Revert to down arrow when closed
+    }
+}
