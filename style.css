@@ -479,6 +479,11 @@ html:not(:target) #Home {
   color: #6c757d; /* Icon color */
 }
 
+/* Underline Relevant Coursework */
+.relevant-coursework:hover {
+    text-decoration: underline;
+    color: #004499;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
