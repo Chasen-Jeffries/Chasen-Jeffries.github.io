@@ -37,3 +37,14 @@ function toggleAbstract(abstractId) {
         document.querySelector(`span[onclick="toggleAbstract('${abstractId}')"]`).innerHTML = 'Abstract &#9660;'; // Revert to down arrow when closed
     }
 }
+
+function toggleCoursework(courseworkId) {
+    var element = document.getElementById(courseworkId);
+    if (element.style.display === 'none' || element.style.display === '') {
+        element.style.display = 'block';
+        document.querySelector(`span[onclick="toggleCoursework('${courseworkId}')"]`).innerHTML = 'Relevant Coursework &#9650;'; // Change to up arrow when open
+    } else {
+        element.style.display = 'none';
+        document.querySelector(`span[onclick="toggleCoursework('${courseworkId}')"]`).innerHTML = 'Relevant Coursework &#9660;'; // Revert to down arrow when closed
+    }
+}
