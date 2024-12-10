@@ -53,6 +53,7 @@ a:hover, a:focus {
 
 /* Setting up the Lists. */
 ul, ol {
+  margin-top: 0; /* Removes the top margin completely */
   margin-left: 40px;
   padding-left: 0;
 }
