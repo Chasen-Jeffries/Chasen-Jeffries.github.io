@@ -88,7 +88,8 @@ ul li div {
 
 /* Ensures hover works for span elements with inline color */
 ul li span[onclick]:hover {
-    text-decoration: underline; /* Underlines the text on hover */
+    text-decoration: underline !important; /* Forces the underline effect */
+    color: #004499 !important; /* Optional: Darkens the color on hover */
 }
 
 .two-column-list {  
