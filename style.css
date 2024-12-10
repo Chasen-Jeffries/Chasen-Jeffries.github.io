@@ -435,7 +435,7 @@ html:not(:target) #Home {
   align-items: center;
   background-color: #F4F7FA;
   color: #36454f;
-  padding: 50px;
+  padding: 25px;
   font-size: 16px;
   border-top: 4px solid #000;
 }
