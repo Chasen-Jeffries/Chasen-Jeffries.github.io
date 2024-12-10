@@ -345,7 +345,7 @@ html:not(:target) #Home {
   display: flex;
   justify-content: space-between; /* Adjust to space-around if items need more space */
   align-items: flex-start; /* Aligns items at the top */
-  padding: 40px 100px; /* Specific padding for this section */
+  padding: 20px 100px; /* Specific padding for this section */
   margin-top: 20px; /* Space from the previous section */
   background-color: #F4F7FA; /* Light gray background maintained */
 }
