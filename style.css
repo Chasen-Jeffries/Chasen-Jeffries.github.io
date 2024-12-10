@@ -433,16 +433,16 @@ html:not(:target) #Home {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #f8f9fa;
+  background-color: #F4F7FA;
   color: #333;
   padding: 10px;
   font-size: 16px;
-  border-top: 2px solid #e7e7e7;
+  border-top: 50px solid #000;
 }
 
 .contact-bar span, .contact-bar a {
   margin: 0 10px;
-  color: #007bff; /* Blue color for interactive elements */
+  color: #000000; /* Blue color for interactive elements */
   text-decoration: none;
 }
 
