@@ -25,7 +25,12 @@ h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
-h2 { font-size: 2rem;   /* Increased to 32px */ }
+
+h2 { 
+  font-size: 2rem;   /* Increased to 32px */ 
+  margin-bottom: 0.5rem;
+   }
+
 h3 { font-size: 1.75rem; /* Increased to 28px */ }
 h4 { font-size: 1.5rem; /* Increased to 24px */ }
 h5 { font-size: 1.25rem; /* Increased to 20px */ }
