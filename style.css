@@ -428,6 +428,24 @@ html:not(:target) #Home {
   color: #000;
 }
 
+/* Contact Info Container */
+.contact-container {
+  background-color: #ffffff; /* Choose a color that fits your design */
+  color: #333333; /* Dark text for readability */
+  text-align: center; /* Center-aligns the text */
+  padding: 20px 0; /* Padding for spacing */
+  border-top: 1px solid #cccccc; /* Adds a subtle top border */
+}
+
+.contact-container a {
+  color: #0066cc; /* Link color */
+  text-decoration: none; /* No underline */
+}
+
+.contact-container a:hover, .contact-container a:focus {
+  text-decoration: underline; /* Underline on hover/focus for better accessibility */
+}
+
 
 
 
