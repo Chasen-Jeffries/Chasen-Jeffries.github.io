@@ -366,8 +366,8 @@ html:not(:target) #Home {
   max-width: 300px; Limits the image width to maintain design consistency
   height: auto;
   */
-  width: 200px; /* Adjust for desired square size */
-  height: 200px; /* Makes the image a square */
+  width: 300px; /* Adjust for desired square size */
+  height: 300px; /* Makes the image a square */
   object-fit: cover; /* Ensures the image fills the square without distortion */
   display: block; /* Ensures consistent spacing and alignment */
   margin: 0 auto; /* Centers the image horizontally */
