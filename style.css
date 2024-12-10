@@ -70,11 +70,11 @@ li {
 ul li span {
     color: #0056b3; /* Change the color as needed */
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 ul li span:hover {
-    text-decoration: none; /* Optional: Change on hover */
+    text-decoration: underline; /* Optional: Change on hover */
 }
 
 ul li div {
