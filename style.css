@@ -429,24 +429,31 @@ html:not(:target) #Home {
 }
 
 /* Contact Info Container */
-.contact-container {
-  background-color: #ffffff; /* Choose a color that fits your design */
-  color: #333333; /* Dark text for readability */
-  text-align: center; /* Center-aligns the text */
-  padding: 20px 0; /* Padding for spacing */
-  border-top: 1px solid #cccccc; /* Adds a subtle top border */
+.contact-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 10px;
+  font-size: 16px;
+  border-top: 2px solid #e7e7e7;
 }
 
-.contact-container a {
-  color: #0066cc; /* Link color */
-  text-decoration: none; /* No underline */
+.contact-bar span, .contact-bar a {
+  margin: 0 10px;
+  color: #007bff; /* Blue color for interactive elements */
+  text-decoration: none;
 }
 
-.contact-container a:hover, .contact-container a:focus {
-  text-decoration: underline; /* Underline on hover/focus for better accessibility */
+.contact-bar a:hover, .contact-bar a:focus {
+  text-decoration: underline;
 }
 
-
+.contact-bar i {
+  margin-right: 5px; /* Small space between icon and text */
+  color: #6c757d; /* Icon color */
+}
 
 
 /* Responsive Design */
