@@ -66,6 +66,25 @@ li {
   margin-bottom: 0.5rem;
 }
 
+/* drop down button/link */
+ul li span {
+    color: #0056b3; /* Change the color as needed */
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+ul li span:hover {
+    text-decoration: none; /* Optional: Change on hover */
+}
+
+ul li div {
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #f9f9f9; /* Slightly off-white for less contrast */
+    border-left: 3px solid #007bff; /* A blue accent line to match the link color */
+    border-radius: 5px;
+    display: none; /* Ensures it starts hidden */
+}
 
 .two-column-list {  
   list-style: none; /* Removes default list styling */
