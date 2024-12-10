@@ -434,10 +434,10 @@ html:not(:target) #Home {
   justify-content: space-evenly;
   align-items: center;
   background-color: #F4F7FA;
-  color: #333;
-  padding: 10px;
+  color: #36454f;
+  padding: 50px;
   font-size: 16px;
-  border-top: 50px solid #000;
+  border-top: 4px solid #000;
 }
 
 .contact-bar span, .contact-bar a {
