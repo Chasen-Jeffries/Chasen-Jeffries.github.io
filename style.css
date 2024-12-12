@@ -431,58 +431,58 @@ html:not(:target) #Home {
 }
 
 /* Top Portfolio Item */
-/* Top Portfolio Item Layout */
 .top-portfolio-content {
     display: flex; /* Horizontal layout */
-    align-items: center; /* Vertically aligns items */
+    align-items: center; /* Align vertically */
     justify-content: space-between; /* Separates image and text */
-    width: 100%; /* Ensures full width */
-    height: 100%; /* Adjusts height to fit content */
-    padding: 0; /* No unnecessary padding */
+    width: 100%; /* Full width */
+    padding: 0; /* Removes unnecessary padding */
     box-sizing: border-box;
 }
 
 /* Image Container */
 .top-image-container {
-    flex: 1; /* Image takes up 50% of the width */
+    flex: 1; /* Image takes exactly 50% of the container */
     display: flex;
-    justify-content: center; /* Centers the image horizontally */
+    justify-content: flex-end; /* Aligns the image to the right edge of its container */
     align-items: center;
-    height: 100%; /* Ensures full container height */
 }
 
 .top-image {
-    width: 100%; /* Ensures image fills its half */
+    width: 100%; /* Fills its container */
     max-width: 100%; /* Prevents shrinking */
-    height: 100%; /* Ensures full height within container */
-    object-fit: cover; /* Crops image to fit while maintaining aspect ratio */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Keeps the image clean and cropped */
+    border-radius: 10px; /* Optional rounded corners */
 }
 
 /* Text Container */
 .top-text-container {
-    flex: 1; /* Text takes up 50% of the width */
-    padding: 40px; /* Adds space around the text */
-    text-align: left; /* Aligns text to the left */
-    box-sizing: border-box; /* Includes padding in the size */
+    flex: 1; /* Text takes exactly 50% of the container */
+    padding: 40px; /* Add spacing for better readability */
+    text-align: left;
+    box-sizing: border-box; /* Padding included in width */
 }
 
 .top-text-container h3 {
-    font-size: 2.5rem; /* Large, clear heading */
-    margin-bottom: 20px; /* Space below the heading */
+    font-size: 2.5rem; /* Larger title */
+    margin-bottom: 20px; /* Space below heading */
     color: #333;
 }
 
 .top-text-container p {
-    font-size: 1.2rem; /* Readable paragraph size */
-    line-height: 1.6; /* Improves spacing between lines */
+    font-size: 1.2rem; /* Readable size */
+    line-height: 1.6; /* Better line spacing */
     color: #555;
 }
 
+/* Bottom Border Divider */
 .top-portfolio-item {
-    border-bottom: 1px solid #000; /* Solid black border divider */
-    margin-bottom: 40px; /* Space between this section and the next */
-    padding-bottom: 20px; /* Padding before the border */
+    border-bottom: 4px solid #000; /* Solid black divider */
+    margin-bottom: 40px; /* Space below the section */
+    padding-bottom: 20px; /* Space above the border */
 }
+
 
 
 /* Contact Info Container */
