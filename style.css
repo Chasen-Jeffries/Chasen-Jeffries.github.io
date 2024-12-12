@@ -431,44 +431,49 @@ html:not(:target) #Home {
 }
 
 /* Top Portfolio Item */
-/* Top Portfolio Item Layout */
 .top-portfolio-content {
-    display: flex; /* Enables flexbox */
-    align-items: center; /* Align items vertically in the center */
-    justify-content: space-between; /* Adds space between image and text */
-    padding: 20px; /* Adds spacing around the content */
-    background-color: #F4F7FA; /* Light background color */
-    border: 3px solid #000; /* Optional border for styling */
-    border-radius: 10px; /* Optional rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    display: flex; /* Creates a horizontal layout */
+    align-items: center; /* Aligns image and text vertically */
+    justify-content: space-between; /* Keeps even spacing */
+    padding: 40px 80px; /* Adjust padding to balance spacing */
+    background-color: #F4F7FA; /* Consistent light background */
+    gap: 40px; /* Adds spacing between image and text */
 }
 
-/* Image on the Left */
-.top-portfolio-content .top-image {
-    width: 300px; /* Fixed width for the image */
-    height: 300px; /* Fixed height to make it a square */
-    object-fit: cover; /* Ensures the image maintains aspect ratio */
-    border-radius: 10px; /* Optional rounded corners */
-    margin-right: 20px; /* Spacing between image and text */
+/* Image Container */
+.top-image-container {
+    flex: 0 0 40%; /* Keeps the image at 40% of the container width */
+    display: flex; /* Ensures image is centered inside the container */
+    justify-content: center;
 }
 
-/* Text on the Right */
-.top-portfolio-content .top-text {
-    flex: 1; /* Allows text to take up remaining space */
+.top-image {
+    width: 100%; /* Makes the image responsive within the container */
+    max-width: 500px; /* Limits the image to a larger size */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image fills its container neatly */
+    border-radius: 10px; /* Optional: Adds slightly rounded corners */
+}
+
+/* Text Container */
+.top-text-container {
+    flex: 1; /* Allows the text to take the remaining space */
     text-align: left; /* Aligns text to the left */
+    color: #000; /* Text color */
 }
 
-.top-portfolio-content h3 {
-    font-size: 2rem; /* Larger font size for the title */
+.top-text-container h3 {
+    font-size: 2.2rem; /* Slightly larger title */
     margin-bottom: 10px; /* Adds space below the title */
-    color: #000; /* Title color */
+    color: #333;
 }
 
-.top-portfolio-content p {
-    font-size: 1.1rem; /* Slightly larger font size for paragraph */
-    color: #333; /* Dark gray text for readability */
-    line-height: 1.6; /* Improved line spacing */
+.top-text-container p {
+    font-size: 1.1rem; /* Readable paragraph size */
+    line-height: 1.6; /* Improves readability */
+    color: #555;
 }
+
 
 /* Contact Info Container */
 .contact-bar {
