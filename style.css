@@ -479,7 +479,7 @@ html:not(:target) #Home {
 }
 
 .top-portfolio-item {
-    border-bottom: 4px solid #000; /* Solid black border divider */
+    border-bottom: 1px solid #000; /* Solid black border divider */
     margin-bottom: 40px; /* Space between this section and the next */
     padding-bottom: 20px; /* Padding before the border */
 }
