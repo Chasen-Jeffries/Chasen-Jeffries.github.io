@@ -459,7 +459,7 @@ html:not(:target) #Home {
 /* Text Container */
 .top-text-container {
     flex: 1; /* Text takes exactly 50% of the container */
-    padding: 40px; /* Add spacing for better readability */
+    padding: 40px 10px; /* Add spacing for better readability */
     text-align: left;
     box-sizing: border-box; /* Padding included in width */
 }
