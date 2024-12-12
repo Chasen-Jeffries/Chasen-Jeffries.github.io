@@ -431,48 +431,53 @@ html:not(:target) #Home {
 }
 
 /* Top Portfolio Item */
+/* Top Portfolio Item Layout */
 .top-portfolio-content {
-    display: flex; /* Creates a horizontal layout */
-    align-items: center; /* Aligns image and text vertically */
-    justify-content: space-between; /* Keeps even spacing */
-    padding: 40px 80px; /* Adjust padding to balance spacing */
-    background-color: #F4F7FA; /* Consistent light background */
-    gap: 40px; /* Adds spacing between image and text */
+    display: flex; /* Horizontal layout */
+    align-items: center; /* Vertically aligns items */
+    justify-content: space-between; /* Separates image and text */
+    width: 100%; /* Ensures full width */
+    height: 100%; /* Adjusts height to fit content */
+    padding: 0; /* No unnecessary padding */
+    box-sizing: border-box;
 }
 
 /* Image Container */
 .top-image-container {
-    flex: 0 0 40%; /* Keeps the image at 40% of the container width */
-    display: flex; /* Ensures image is centered inside the container */
-    justify-content: center;
+    flex: 1; /* Image takes up 50% of the width */
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center;
+    height: 100%; /* Ensures full container height */
 }
 
 .top-image {
-    width: 100%; /* Makes the image responsive within the container */
-    max-width: 500px; /* Limits the image to a larger size */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures the image fills its container neatly */
-    border-radius: 10px; /* Optional: Adds slightly rounded corners */
+    width: 100%; /* Ensures image fills its half */
+    max-width: 100%; /* Prevents shrinking */
+    height: 100%; /* Ensures full height within container */
+    object-fit: cover; /* Crops image to fit while maintaining aspect ratio */
 }
 
 /* Text Container */
 .top-text-container {
-    flex: 1; /* Allows the text to take the remaining space */
+    flex: 1; /* Text takes up 50% of the width */
+    padding: 40px; /* Adds space around the text */
     text-align: left; /* Aligns text to the left */
-    color: #000; /* Text color */
+    box-sizing: border-box; /* Includes padding in the size */
 }
 
 .top-text-container h3 {
-    font-size: 2.2rem; /* Slightly larger title */
-    margin-bottom: 10px; /* Adds space below the title */
+    font-size: 2.5rem; /* Large, clear heading */
+    margin-bottom: 20px; /* Space below the heading */
     color: #333;
 }
 
 .top-text-container p {
-    font-size: 1.1rem; /* Readable paragraph size */
-    line-height: 1.6; /* Improves readability */
+    font-size: 1.2rem; /* Readable paragraph size */
+    line-height: 1.6; /* Improves spacing between lines */
     color: #555;
 }
+
 
 
 /* Contact Info Container */
