@@ -541,21 +541,22 @@ html:not(:target) #Home {
 }
 
 /* audio player element */
-..audio-container.vertical {
+.audio-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
     align-items: center;
+    gap: 15px; /* Space between text and audio controls */
 }
 
 .audio-caption {
     font-size: 16px;
     color: #333;
-    margin-bottom: 5px;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 audio {
-    width: 250px;
+    width: 250px; /* Adjust as needed */
 }
+
 
 
 
