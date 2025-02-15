@@ -543,16 +543,18 @@ html:not(:target) #Home {
 /* audio player element */
 .audio-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    margin-top: 20px;
+    gap: 15px; /* Space between text and audio controls */
+}
+
+.audio-caption {
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 audio {
-    width: 300px; /* Adjust as needed */
-    border-radius: 20px; /* Rounded edges */
-    background: #f4f4f4; /* Light background */
+    width: 250px; /* Adjust as needed */
 }
 
 
