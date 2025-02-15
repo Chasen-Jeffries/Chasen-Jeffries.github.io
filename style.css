@@ -541,22 +541,35 @@ html:not(:target) #Home {
 }
 
 /* audio player element */
-.audio-player {
+.audio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.controls {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 10px;
 }
 
-#audio {
-  display: none; /* Hide the default audio element */
+#play-pause i {
+  font-size: 24px;
 }
 
-#play-pause {
-  padding: 5px 10px;
-  cursor: pointer;
+#play-pause.pause i {
+  content: '\f04c'; /* Unicode for pause icon */
 }
 
 #volume-slider {
   width: 100px;
 }
+
 
