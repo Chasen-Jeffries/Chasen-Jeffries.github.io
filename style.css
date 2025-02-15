@@ -539,3 +539,24 @@ html:not(:target) #Home {
     margin-bottom: 10px;
   }
 }
+
+/* audio player element */
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#audio {
+  display: none; /* Hide the default audio element */
+}
+
+#play-pause {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#volume-slider {
+  width: 100px;
+}
+
