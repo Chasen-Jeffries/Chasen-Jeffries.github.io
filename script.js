@@ -48,25 +48,3 @@ function toggleCoursework(courseworkId) {
         document.querySelector(`span[onclick="toggleCoursework('${courseworkId}')"]`).innerHTML = 'Relevant Coursework &#9660;'; // Revert to down arrow when closed
     }
 }
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const audio = document.getElementById('audio');
-  const playPauseButton = document.getElementById('play-pause');
-  const volumeSlider = document.getElementById('volume-slider');
-
-  playPauseButton.addEventListener('click', function() {
-    if (audio.paused) {
-      audio.play();
-      playPauseButton.classList.add('pause');
-    } else {
-      audio.pause();
-      playPauseButton.classList.remove('pause');
-    }
-  });
-
-  volumeSlider.addEventListener('input', function() {
-    audio.volume = volumeSlider.value / 100;
-  });
-});
-
