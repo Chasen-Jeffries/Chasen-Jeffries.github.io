@@ -58,10 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
   playPauseButton.addEventListener('click', function() {
     if (audio.paused) {
       audio.play();
-      playPauseButton.textContent = 'Pause';
+      playPauseButton.classList.add('pause');
     } else {
       audio.pause();
-      playPauseButton.textContent = 'Play';
+      playPauseButton.classList.remove('pause');
     }
   });
 
@@ -69,3 +69,4 @@ document.addEventListener('DOMContentLoaded', function() {
     audio.volume = volumeSlider.value / 100;
   });
 });
+
