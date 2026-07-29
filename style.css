@@ -734,21 +734,22 @@ audio {
   .cm-help-grid { grid-template-columns: 1fr; }
 }
 
+
 /* Multicolor "Creative Madlibs" wordmark */
 .cm-rainbow { font-weight: 700; }
-.cm-rainbow span:nth-child(1)  { color: #3b82f6; } /* C - noun blue */
-.cm-rainbow span:nth-child(2)  { color: #ef4444; } /* r - verb red */
-.cm-rainbow span:nth-child(3)  { color: #22c55e; } /* e - adj green */
-.cm-rainbow span:nth-child(4)  { color: #eab308; } /* a - adverb yellow */
-.cm-rainbow span:nth-child(5)  { color: #a855f7; } /* t - character purple */
-.cm-rainbow span:nth-child(6)  { color: #f97316; } /* i - time orange */
-.cm-rainbow span:nth-child(7)  { color: #3b82f6; } /* v */
-.cm-rainbow span:nth-child(8)  { color: #ef4444; } /* e */
-/* child 9 is the space between the words */
-.cm-rainbow span:nth-child(10) { color: #22c55e; } /* M */
-.cm-rainbow span:nth-child(11) { color: #eab308; } /* a */
-.cm-rainbow span:nth-child(12) { color: #a855f7; } /* d */
-.cm-rainbow span:nth-child(13) { color: #f97316; } /* l */
-.cm-rainbow span:nth-child(14) { color: #3b82f6; } /* i */
-.cm-rainbow span:nth-child(15) { color: #ef4444; } /* b */
-.cm-rainbow span:nth-child(16) { color: #22c55e; } /* s */
+.cm-rainbow span:nth-child(1)  { color: #2563eb; } /* C - noun blue */
+.cm-rainbow span:nth-child(2)  { color: #dc2626; } /* r - verb red */
+.cm-rainbow span:nth-child(3)  { color: #16a34a; } /* e - adj green */
+.cm-rainbow span:nth-child(4)  { color: #ca8a04; } /* a - adverb gold */
+.cm-rainbow span:nth-child(5)  { color: #9333ea; } /* t - character purple */
+.cm-rainbow span:nth-child(6)  { color: #ea580c; } /* i - time orange */
+.cm-rainbow span:nth-child(7)  { color: #2563eb; } /* v */
+.cm-rainbow span:nth-child(8)  { color: #dc2626; } /* e */
+/* child 9 is the space */
+.cm-rainbow span:nth-child(10) { color: #16a34a; } /* M */
+.cm-rainbow span:nth-child(11) { color: #ca8a04; } /* a */
+.cm-rainbow span:nth-child(12) { color: #9333ea; } /* d */
+.cm-rainbow span:nth-child(13) { color: #ea580c; } /* l */
+.cm-rainbow span:nth-child(14) { color: #2563eb; } /* i */
+.cm-rainbow span:nth-child(15) { color: #dc2626; } /* b */
+.cm-rainbow span:nth-child(16) { color: #16a34a; } /* s */
