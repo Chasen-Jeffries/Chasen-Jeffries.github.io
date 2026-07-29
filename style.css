@@ -574,7 +574,7 @@ audio {
   text-align: center;
   max-width: 680px;
   margin: 0 auto 40px;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   color: #36454f;
 }
@@ -662,7 +662,7 @@ audio {
 }
 .cm-control-empty { opacity: 0.4; }
 .cm-control-word {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
   line-height: 1.2;
