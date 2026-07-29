@@ -765,3 +765,11 @@ audio {
   .cm-controls-row { grid-template-columns: repeat(3, 1fr); }
   .cm-help-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Hide the controls row's divider until it's populated */
+#Madlibs .cm-controls-row:empty {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
