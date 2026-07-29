@@ -1,0 +1,413 @@
+{
+  "schemaVersion": 1,
+  "categories": {
+    "noun": {
+      "label": "Noun",
+      "color": "#3b82f6",
+      "words": [
+        "toaster",
+        "pelican",
+        "escalator",
+        "haunted printer",
+        "vending machine",
+        "glacier",
+        "accordion",
+        "trampoline",
+        "lawn flamingo",
+        "sock puppet",
+        "rubber duck",
+        "volcano",
+        "spreadsheet",
+        "chandelier",
+        "lighthouse",
+        "wheelbarrow",
+        "jellyfish",
+        "cactus",
+        "grandfather clock",
+        "paper shredder",
+        "disco ball",
+        "kayak",
+        "submarine",
+        "bagpipe",
+        "ferris wheel",
+        "tumbleweed",
+        "meat grinder",
+        "weather balloon",
+        "porta-potty",
+        "gargoyle",
+        "traffic cone",
+        "fondue pot",
+        "hovercraft",
+        "garden hose",
+        "bowling trophy",
+        "xylophone",
+        "hot air balloon",
+        "filing cabinet",
+        "piñata",
+        "seesaw",
+        "harpoon",
+        "recliner",
+        "ceiling fan",
+        "mousetrap",
+        "telescope",
+        "waffle iron",
+        "canoe",
+        "megaphone",
+        "revolving door",
+        "laundromat"
+      ]
+    },
+    "verb": {
+      "label": "Verb",
+      "color": "#ef4444",
+      "words": [
+        "sprint",
+        "whisper",
+        "juggle",
+        "negotiate",
+        "collapse",
+        "tiptoe",
+        "panic",
+        "waltz",
+        "levitate",
+        "apologize",
+        "marinate",
+        "evacuate",
+        "salute",
+        "moonwalk",
+        "lecture",
+        "wobble",
+        "vanish",
+        "unravel",
+        "ferment",
+        "interrogate",
+        "stampede",
+        "tap-dance",
+        "malfunction",
+        "improvise",
+        "hibernate",
+        "filibuster",
+        "cartwheel",
+        "eavesdrop",
+        "photosynthesize",
+        "gloat",
+        "ricochet",
+        "procrastinate",
+        "yodel",
+        "combust",
+        "negotiate a truce with",
+        "surrender to",
+        "meditate",
+        "backflip",
+        "bargain",
+        "sob",
+        "gallop",
+        "pirouette",
+        "haggle",
+        "slither",
+        "impersonate",
+        "capsize",
+        "overthink",
+        "reboot",
+        "juggle chainsaws with",
+        "curtsy"
+      ]
+    },
+    "adjective": {
+      "label": "Adjective",
+      "color": "#22c55e",
+      "words": [
+        "suspicious",
+        "soggy",
+        "majestic",
+        "over-caffeinated",
+        "forbidden",
+        "enormous",
+        "passive-aggressive",
+        "velvet",
+        "feral",
+        "radioactive",
+        "ancient",
+        "slippery",
+        "unhinged",
+        "luxurious",
+        "haunted",
+        "bureaucratic",
+        "glittery",
+        "damp",
+        "smug",
+        "inflatable",
+        "reckless",
+        "translucent",
+        "melodramatic",
+        "counterfeit",
+        "lopsided",
+        "insufferable",
+        "gelatinous",
+        "flammable",
+        "pompous",
+        "threadbare",
+        "suspiciously calm",
+        "overqualified",
+        "brittle",
+        "iridescent",
+        "clammy",
+        "disgruntled",
+        "ceremonial",
+        "waterlogged",
+        "impeccable",
+        "combustible",
+        "dignified",
+        "greasy",
+        "ominous",
+        "sentient",
+        "discontinued",
+        "fraudulent",
+        "moist",
+        "regal",
+        "clumsy",
+        "ill-advised"
+      ]
+    },
+    "adverb": {
+      "label": "Adverb",
+      "color": "#b45309",
+      "words": [
+        "aggressively",
+        "tenderly",
+        "reluctantly",
+        "dramatically",
+        "silently",
+        "gracefully",
+        "suspiciously",
+        "enthusiastically",
+        "sarcastically",
+        "frantically",
+        "politely",
+        "ominously",
+        "confidently",
+        "awkwardly",
+        "secretly",
+        "proudly",
+        "desperately",
+        "casually",
+        "violently",
+        "smugly",
+        "begrudgingly",
+        "triumphantly",
+        "clumsily",
+        "majestically",
+        "furtively",
+        "solemnly",
+        "hysterically",
+        "cautiously",
+        "recklessly",
+        "obnoxiously",
+        "wistfully",
+        "menacingly",
+        "earnestly",
+        "theatrically",
+        "sheepishly",
+        "ferociously",
+        "gingerly",
+        "haphazardly",
+        "defiantly",
+        "tearfully",
+        "joyfully",
+        "grudgingly",
+        "seductively",
+        "nervously",
+        "boldly",
+        "lazily",
+        "frantically at first",
+        "ceremoniously",
+        "abruptly",
+        "unconvincingly"
+      ]
+    },
+    "character": {
+      "label": "Character",
+      "color": "#a855f7",
+      "words": [
+        "a pirate",
+        "a disappointed wizard",
+        "a motivational speaker",
+        "a tired cowboy",
+        "a mad scientist",
+        "a substitute teacher",
+        "a conspiracy theorist",
+        "a game show host",
+        "a medieval peasant",
+        "a yoga instructor",
+        "a detective",
+        "a sea captain",
+        "a referee",
+        "a fortune teller",
+        "a vampire on a diet",
+        "a knight with stage fright",
+        "three hungry hippos",
+        "two nervous accountants",
+        "a retired supervillain",
+        "a very polite goblin",
+        "a jazz musician",
+        "a lonely lighthouse keeper",
+        "a suspicious librarian",
+        "a dramatic barista",
+        "a fleet of confused robots",
+        "a grumpy wizard",
+        "a llama in a tuxedo",
+        "an undercover duck",
+        "a sleep-deprived intern",
+        "a pack of philosophical wolves",
+        "a smooth-talking raccoon",
+        "a nervous magician",
+        "a disgraced chef",
+        "a ghost with commitment issues",
+        "a tiny but confident dragon",
+        "a committee of pigeons",
+        "an overworked tooth fairy",
+        "a melodramatic houseplant",
+        "a gang of elderly bikers",
+        "a spy who's bad at secrets"
+      ]
+    },
+    "time": {
+      "label": "Time / Occasion",
+      "color": "#f97316",
+      "words": [
+        "on the last day of summer",
+        "during a blackout",
+        "three minutes before closing",
+        "at a funeral",
+        "the morning after the storm",
+        "during the office holiday party",
+        "in the middle of a heat wave",
+        "just before the eclipse",
+        "on a rainy Tuesday",
+        "at the stroke of midnight",
+        "during rush hour",
+        "the night before the big exam",
+        "in the dead of winter",
+        "at the family reunion",
+        "during a fire drill",
+        "on the first day of retirement",
+        "in the checkout line",
+        "during the wedding toast",
+        "moments before liftoff",
+        "at the county fair",
+        "during a power outage",
+        "on the eve of the apocalypse",
+        "halfway through the marathon",
+        "at the annual bake sale",
+        "during a lightning storm",
+        "on the longest night of the year",
+        "in the waiting room",
+        "just after last call",
+        "during the school play",
+        "on laundry day"
+      ]
+    }
+  },
+  "frames": [
+    {
+      "id": "f01",
+      "text": "The [ADJECTIVE] [NOUN] decided to [VERB] in front of everyone."
+    },
+    {
+      "id": "f02",
+      "text": "[CHARACTER] is learning to [VERB] [ADVERB]."
+    },
+    {
+      "id": "f03",
+      "text": "[TIME], [CHARACTER] finally chose to [VERB]."
+    },
+    {
+      "id": "f04",
+      "text": "Every [NOUN] in town is [ADJECTIVE], but one [NOUN] refuses."
+    },
+    {
+      "id": "f05",
+      "text": "Write about the day [CHARACTER] tried to [VERB] the [ADJECTIVE] [NOUN]."
+    },
+    {
+      "id": "f06",
+      "text": "Two [NOUN]s go missing [TIME]."
+    },
+    {
+      "id": "f07",
+      "text": "Something [ADJECTIVE] is about to [VERB], and only [CHARACTER] knows."
+    },
+    {
+      "id": "f08",
+      "text": "[CHARACTER] and [CHARACTER] share an elevator [TIME]."
+    },
+    {
+      "id": "f09",
+      "text": "The [NOUN] has learned to [VERB], and it does so [ADVERB]."
+    },
+    {
+      "id": "f10",
+      "text": "Describe the [ADJECTIVE] room where [CHARACTER] waits [ADVERB]."
+    },
+    {
+      "id": "f11",
+      "text": "[TIME], the [NOUN] began to [VERB] [ADVERB]."
+    },
+    {
+      "id": "f12",
+      "text": "Nobody warned [CHARACTER] that the [NOUN] would be this [ADJECTIVE]."
+    },
+    {
+      "id": "f13",
+      "text": "The last [ADJECTIVE] [NOUN] on earth is guarded by [CHARACTER]."
+    },
+    {
+      "id": "f14",
+      "text": "[CHARACTER] must [VERB] [ADVERB] or lose the [NOUN] forever."
+    },
+    {
+      "id": "f15",
+      "text": "It started [TIME], when the [ADJECTIVE] [NOUN] refused to [VERB]."
+    },
+    {
+      "id": "f16",
+      "text": "[CHARACTER] keeps the [ADJECTIVE] [NOUN] hidden for emergencies."
+    },
+    {
+      "id": "f17",
+      "text": "They say [CHARACTER] once tried to [VERB] the [NOUN] [ADVERB]."
+    },
+    {
+      "id": "f18",
+      "text": "The [NOUN] and the [NOUN] share one [ADJECTIVE] rivalry."
+    },
+    {
+      "id": "f19",
+      "text": "[TIME], everyone agreed the [NOUN] had become far too [ADJECTIVE]."
+    },
+    {
+      "id": "f20",
+      "text": "A story where [CHARACTER] learns to [VERB] from the [ADJECTIVE] [NOUN]."
+    },
+    {
+      "id": "f21",
+      "text": "Why does [CHARACTER] always [VERB] so [ADVERB]?"
+    },
+    {
+      "id": "f22",
+      "text": "The [ADJECTIVE] [NOUN] only appears [TIME]."
+    },
+    {
+      "id": "f23",
+      "text": "[CHARACTER] swore to [VERB] every [NOUN] in the building."
+    },
+    {
+      "id": "f24",
+      "text": "Picture the [ADJECTIVE] [NOUN] trying to [VERB] [ADVERB]."
+    },
+    {
+      "id": "f25",
+      "text": "[TIME], [CHARACTER] and the [ADJECTIVE] [NOUN] changed everything."
+    }
+  ]
+}
