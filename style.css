@@ -559,6 +559,7 @@ audio {
 
 
 
+
 /* ===== Creative Madlibs generator ===== */
 
 /* Section column */
@@ -640,32 +641,32 @@ audio {
 }
 .cm-word { font-weight: 700; }
 
-/* Row of category controls */
+/* Row of category controls — 6-column grid keeps them on one line */
 .cm-controls-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
   max-width: 860px;
   margin-left: auto;
   margin-right: auto;
+  align-items: start;
 }
 
-/* Fixed-width control so the row never shifts when words change */
+/* One control: word on top, badge, arrows */
 .cm-control {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  width: 132px;
+  width: 100%;
 }
 .cm-control-empty { opacity: 0.4; }
 .cm-control-word {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-align: center;
   line-height: 1.2;
-  min-height: 2.9em;      /* reserves room for up to two lines */
+  min-height: 2.9em;      /* reserves room for up to two lines so the row stays aligned */
   width: 100%;
   display: flex;
   align-items: center;
@@ -678,8 +679,8 @@ audio {
 .cm-badge {
   border: 2px solid currentColor;
   border-radius: 999px;
-  padding: 3px 10px;
-  font-size: 0.8rem;
+  padding: 3px 8px;
+  font-size: 0.75rem;
   font-weight: 700;
   background: #fff;
   text-align: center;
@@ -694,14 +695,14 @@ audio {
 .cm-badge-dup:hover { background: #f0f4f8; }
 
 /* Arrows */
-.cm-arrows { display: flex; gap: 16px; }
+.cm-arrows { display: flex; gap: 12px; }
 .cm-arrow {
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
   line-height: 1;
   color: #36454f;
-  padding: 2px 10px;
+  padding: 2px 9px;
   border: 2px solid #36454f;
   border-radius: 6px;
   background: #fff;
@@ -759,8 +760,8 @@ audio {
 @media (max-width: 768px) {
   .cm-card { padding: 24px; }
   .cm-sentence { font-size: 1.4rem; }
-  .cm-controls-row { gap: 16px; }
 }
-@media (max-width: 680px) {
+@media (max-width: 600px) {
+  .cm-controls-row { grid-template-columns: repeat(3, 1fr); }
   .cm-help-grid { grid-template-columns: 1fr; }
 }
