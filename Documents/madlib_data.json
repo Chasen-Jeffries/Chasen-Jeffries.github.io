@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "categories": {
+    "noun": {
+      "label": "Noun",
+      "color": "#3b82f6",
+      "words": [
+        "toaster",
+        "pelican",
+        "escalator",
+        "haunted printer",
+        "vending machine"
+      ]
+    },
+    "verb": {
+      "label": "Verb",
+      "color": "#ef4444",
+      "words": [
+        "sprint",
+        "whisper",
+        "juggle",
+        "negotiate",
+        "collapse"
+      ]
+    },
+    "adjective": {
+      "label": "Adjective",
+      "color": "#22c55e",
+      "words": [
+        "suspicious",
+        "soggy",
+        "majestic",
+        "over-caffeinated",
+        "forbidden"
+      ]
+    },
+    "adverb": {
+      "label": "Adverb",
+      "color": "#eab308",
+      "words": [
+        "aggressively",
+        "tenderly",
+        "reluctantly",
+        "dramatically",
+        "silently"
+      ]
+    },
+    "character": {
+      "label": "Character",
+      "color": "#a855f7",
+      "words": [
+        "a pirate",
+        "a disappointed wizard",
+        "a motivational speaker",
+        "a tired cowboy",
+        "a mad scientist"
+      ]
+    },
+    "time": {
+      "label": "Time / Occasion",
+      "color": "#f97316",
+      "words": [
+        "on the last day of summer",
+        "during a blackout",
+        "three minutes before closing",
+        "at a funeral",
+        "the morning after the storm"
+      ]
+    }
+  },
+  "frames": [
+    {
+      "id": "f01",
+      "text": "The [ADJECTIVE] [NOUN] decided to [VERB] in front of everyone."
+    },
+    {
+      "id": "f02",
+      "text": "[CHARACTER] is learning to [VERB] [ADVERB]."
+    },
+    {
+      "id": "f03",
+      "text": "[TIME], [CHARACTER] finally chose to [VERB]."
+    },
+    {
+      "id": "f04",
+      "text": "Every [NOUN] in town is [ADJECTIVE], but one [NOUN] refuses."
+    },
+    {
+      "id": "f05",
+      "text": "Write about the day [CHARACTER] tried to [VERB] the [ADJECTIVE] [NOUN]."
+    },
+    {
+      "id": "f06",
+      "text": "Two [NOUN]s go missing [TIME]."
+    },
+    {
+      "id": "f07",
+      "text": "Something [ADJECTIVE] is about to [VERB], and only [CHARACTER] knows."
+    },
+    {
+      "id": "f08",
+      "text": "[CHARACTER] and [CHARACTER] share an elevator [TIME]."
+    },
+    {
+      "id": "f09",
+      "text": "The [NOUN] has learned to [VERB], and it does so [ADVERB]."
+    },
+    {
+      "id": "f10",
+      "text": "Describe the [ADJECTIVE] room where [CHARACTER] waits [ADVERB]."
+    },
+    {
+      "id": "f11",
+      "text": "[TIME], the [NOUN] began to [VERB] [ADVERB]."
+    },
+    {
+      "id": "f12",
+      "text": "Nobody warned [CHARACTER] that the [NOUN] would be this [ADJECTIVE]."
+    },
+    {
+      "id": "f13",
+      "text": "The last [ADJECTIVE] [NOUN] on earth is guarded by [CHARACTER]."
+    },
+    {
+      "id": "f14",
+      "text": "[CHARACTER] must [VERB] [ADVERB] or lose the [NOUN] forever."
+    },
+    {
+      "id": "f15",
+      "text": "It started [TIME], when the [ADJECTIVE] [NOUN] refused to [VERB]."
+    }
+  ]
+}
