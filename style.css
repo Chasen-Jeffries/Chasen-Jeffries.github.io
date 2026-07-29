@@ -559,7 +559,6 @@ audio {
 
 
 
-
 /* ===== Creative Madlibs generator ===== */
 
 /* Section column */
@@ -578,6 +577,25 @@ audio {
   line-height: 1.7;
   color: #36454f;
 }
+
+/* Multicolor "Creative Madlibs" wordmark — Scheme 4 (readable category colors) */
+.cm-rainbow { font-weight: 700; }
+.cm-rainbow span:nth-child(1)  { color: #2563eb; }
+.cm-rainbow span:nth-child(2)  { color: #dc2626; }
+.cm-rainbow span:nth-child(3)  { color: #16a34a; }
+.cm-rainbow span:nth-child(4)  { color: #ca8a04; }
+.cm-rainbow span:nth-child(5)  { color: #9333ea; }
+.cm-rainbow span:nth-child(6)  { color: #ea580c; }
+.cm-rainbow span:nth-child(7)  { color: #2563eb; }
+.cm-rainbow span:nth-child(8)  { color: #dc2626; }
+/* child 9 is the space */
+.cm-rainbow span:nth-child(10) { color: #16a34a; }
+.cm-rainbow span:nth-child(11) { color: #ca8a04; }
+.cm-rainbow span:nth-child(12) { color: #9333ea; }
+.cm-rainbow span:nth-child(13) { color: #ea580c; }
+.cm-rainbow span:nth-child(14) { color: #2563eb; }
+.cm-rainbow span:nth-child(15) { color: #dc2626; }
+.cm-rainbow span:nth-child(16) { color: #16a34a; }
 
 /* Black dividers between sections (matches .top-portfolio-item) */
 #Madlibs .cm-controls,
@@ -627,34 +645,47 @@ audio {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
-  max-width: 820px;
+  gap: 20px;
+  max-width: 860px;
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Fixed-width control so the row never shifts when words change */
 .cm-control {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  min-width: 110px;
+  width: 132px;
 }
 .cm-control-empty { opacity: 0.4; }
 .cm-control-word {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  min-height: 1.4em;
   text-align: center;
+  line-height: 1.2;
+  min-height: 2.9em;      /* reserves room for up to two lines */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Type badge */
 .cm-badge {
   border: 2px solid currentColor;
   border-radius: 999px;
-  padding: 3px 14px;
-  font-size: 0.85rem;
+  padding: 3px 10px;
+  font-size: 0.8rem;
   font-weight: 700;
   background: #fff;
+  text-align: center;
+  line-height: 1.15;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 .cm-badge-dup {
   cursor: pointer;
@@ -733,23 +764,3 @@ audio {
 @media (max-width: 680px) {
   .cm-help-grid { grid-template-columns: 1fr; }
 }
-
-
-/* Multicolor "Creative Madlibs" wordmark */
-.cm-rainbow { font-weight: 700; }
-.cm-rainbow span:nth-child(1)  { color: #2563eb; } /* C - noun blue */
-.cm-rainbow span:nth-child(2)  { color: #dc2626; } /* r - verb red */
-.cm-rainbow span:nth-child(3)  { color: #16a34a; } /* e - adj green */
-.cm-rainbow span:nth-child(4)  { color: #ca8a04; } /* a - adverb gold */
-.cm-rainbow span:nth-child(5)  { color: #9333ea; } /* t - character purple */
-.cm-rainbow span:nth-child(6)  { color: #ea580c; } /* i - time orange */
-.cm-rainbow span:nth-child(7)  { color: #2563eb; } /* v */
-.cm-rainbow span:nth-child(8)  { color: #dc2626; } /* e */
-/* child 9 is the space */
-.cm-rainbow span:nth-child(10) { color: #16a34a; } /* M */
-.cm-rainbow span:nth-child(11) { color: #ca8a04; } /* a */
-.cm-rainbow span:nth-child(12) { color: #9333ea; } /* d */
-.cm-rainbow span:nth-child(13) { color: #ea580c; } /* l */
-.cm-rainbow span:nth-child(14) { color: #2563eb; } /* i */
-.cm-rainbow span:nth-child(15) { color: #dc2626; } /* b */
-.cm-rainbow span:nth-child(16) { color: #16a34a; } /* s */
