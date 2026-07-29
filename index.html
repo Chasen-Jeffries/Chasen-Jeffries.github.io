@@ -665,180 +665,192 @@
     <script type="text/javascript" src="script.js"></script>
 
     <!-- Adding Creative Madlibs JS Script Here -->
-    <script>
+<script>
 /* ===== Creative Madlibs generator ===== */
 (function () {
   "use strict";
 
-  var DATA_URL = "Documents/madlib_data.json"; // sits in the repo root next to index.html
-  var data = null;
-  var currentFrame = null;   // the active frame object
-  var slotState = [];        // per segment: { history: [...], pos: int } for slots, or null for text
+  var DATA_URL = "Documents/madlib_data.json";
+  var CATEGORY_ORDER = ["noun", "verb", "adjective", "adverb", "character", "time"];
 
-  var outputEl = document.getElementById("cm-output");
+  var data = null;
+  var currentFrame = null;   // active frame object with _segments
+  var slotState = [];        // per segment: {history:[...], pos:int} for slots, else null
+  var activeSlotFor = {};    // category -> which segment index its control currently shows
+
+  var sentenceEl = document.getElementById("cm-sentence");
+  var controlsEl = document.getElementById("cm-controls-row");
   var generateBtn = document.getElementById("cm-generate");
 
-  // Load the word bank, then turn on the button
   fetch(DATA_URL)
-    .then(function (res) {
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      return res.json();
-    })
+    .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
     .then(function (json) {
       data = json;
       generateBtn.addEventListener("click", generate);
-      generate(); // show one on load so the card isn't empty
+      generate();
     })
     .catch(function (err) {
-      showError(
-        "Couldn't load the word bank (" + err.message + "). " +
-        "This page needs to run on a server (like GitHub Pages) — browsers block " +
-        "file access when you open the HTML directly from your computer."
-      );
+      sentenceEl.innerHTML = "";
+      var box = document.createElement("div");
+      box.className = "cm-error";
+      box.textContent = "Couldn't load the word bank (" + err.message +
+        "). This page needs to run on a server (like GitHub Pages).";
+      sentenceEl.appendChild(box);
+      generateBtn.disabled = true;
     });
 
-  // Parse "The [ADJECTIVE] [NOUN] ran." into ordered segments.
-  // Each slot keeps a category; repeated types are fine (tracked by position).
-  function parseFrame(frameText) {
-    var segments = [];
-    var re = /\[([A-Z_ /]+)\]/g;
-    var last = 0, m;
-    while ((m = re.exec(frameText)) !== null) {
-      if (m.index > last) segments.push({ text: frameText.slice(last, m.index) });
-      segments.push({ slot: m[1].toLowerCase() });
+  // "The [ADJECTIVE] [NOUN] ran." -> ordered segments
+  function parseFrame(text) {
+    var segs = [], re = /\[([A-Z_ /]+)\]/g, last = 0, m;
+    while ((m = re.exec(text)) !== null) {
+      if (m.index > last) segs.push({ text: text.slice(last, m.index) });
+      segs.push({ slot: m[1].toLowerCase() });
       last = re.lastIndex;
     }
-    if (last < frameText.length) segments.push({ text: frameText.slice(last) });
-    return segments;
+    if (last < text.length) segs.push({ text: text.slice(last) });
+    return segs;
   }
 
   // Draw N distinct random words from a category (no repeats within a frame)
-  function drawWords(categoryKey, count) {
-    var cat = data.categories[categoryKey];
-    if (!cat) return [];
-    var pool = cat.words.slice();
-    var chosen = [];
-    for (var i = 0; i < count && pool.length > 0; i++) {
-      var idx = Math.floor(Math.random() * pool.length);
-      chosen.push(pool.splice(idx, 1)[0]);
-    }
-    return chosen;
+  function drawWords(cat, n) {
+    var c = data.categories[cat]; if (!c) return [];
+    var pool = c.words.slice(), out = [];
+    for (var i = 0; i < n && pool.length; i++) out.push(pool.splice(Math.floor(Math.random()*pool.length),1)[0]);
+    return out;
   }
 
-  // Which words are currently shown by OTHER slots of the same category
-  function wordsUsedByOtherSlots(exceptIndex, category) {
+  // Segment indices (in order) that use a given category
+  function slotsOfCategory(cat) {
+    var idxs = [];
+    currentFrame._segments.forEach(function (s, i) { if (s.slot === cat) idxs.push(i); });
+    return idxs;
+  }
+
+  // Words currently shown by OTHER slots of the same category
+  function usedByOthers(exceptIdx, cat) {
     var used = [];
-    currentFrame._segments.forEach(function (seg, i) {
-      if (i !== exceptIndex && seg.slot === category) {
-        var st = slotState[i];
-        used.push(st.history[st.pos]);
-      }
+    slotsOfCategory(cat).forEach(function (i) {
+      if (i !== exceptIdx) { var st = slotState[i]; used.push(st.history[st.pos]); }
     });
     return used;
   }
 
-  // Pick a fresh frame and fill every slot; reset each slot's history
   function generate() {
-    var frames = data.frames;
-    currentFrame = frames[Math.floor(Math.random() * frames.length)];
+    currentFrame = data.frames[Math.floor(Math.random() * data.frames.length)];
     currentFrame._segments = parseFrame(currentFrame.text);
 
-    // Count slots per category so we can draw them all at once (enforces no-repeats)
     var needed = {};
-    currentFrame._segments.forEach(function (seg) {
-      if (seg.slot) needed[seg.slot] = (needed[seg.slot] || 0) + 1;
-    });
-    var drawn = {}, cursor = {};
+    currentFrame._segments.forEach(function (s) { if (s.slot) needed[s.slot] = (needed[s.slot]||0)+1; });
+    var drawn = {}, cur = {};
     Object.keys(needed).forEach(function (k) { drawn[k] = drawWords(k, needed[k]); });
 
-    // Seed each slot's history with its first word
-    slotState = currentFrame._segments.map(function (seg) {
-      if (!seg.slot) return null;
-      cursor[seg.slot] = cursor[seg.slot] || 0;
-      var word = drawn[seg.slot][cursor[seg.slot]++];
-      return { history: [word], pos: 0 };
+    slotState = currentFrame._segments.map(function (s) {
+      if (!s.slot) return null;
+      cur[s.slot] = cur[s.slot] || 0;
+      return { history: [ drawn[s.slot][cur[s.slot]++] ], pos: 0 };
     });
 
-    render();
+    activeSlotFor = {};
+    CATEGORY_ORDER.forEach(function (cat) {
+      var idxs = slotsOfCategory(cat);
+      activeSlotFor[cat] = idxs.length ? idxs[0] : null;
+    });
+
+    renderSentence();
+    renderControls();
   }
 
-  // Right arrow: draw a NEW word (excluding words shown by sibling slots), advance history
-  function stepForward(i) {
-    var seg = currentFrame._segments[i];
-    var st = slotState[i];
-    var used = wordsUsedByOtherSlots(i, seg.slot);
-    var current = st.history[st.pos];
+  function stepForward(segIdx) {
+    var seg = currentFrame._segments[segIdx], st = slotState[segIdx];
+    var used = usedByOthers(segIdx, seg.slot), current = st.history[st.pos];
     var pool = data.categories[seg.slot].words.filter(function (w) {
       return used.indexOf(w) === -1 && w !== current;
     });
-    if (pool.length === 0) return; // nothing new available
-    var next = pool[Math.floor(Math.random() * pool.length)];
-    // Truncate any "redo" tail, then append and advance
+    if (!pool.length) return;
     st.history = st.history.slice(0, st.pos + 1);
-    st.history.push(next);
+    st.history.push(pool[Math.floor(Math.random()*pool.length)]);
     st.pos++;
-    render();
+    renderSentence(); renderControls();
   }
 
-  // Left arrow: step back to a previously seen word for this slot
-  function stepBack(i) {
-    var st = slotState[i];
-    if (st.pos > 0) { st.pos--; render(); }
+  function stepBack(segIdx) {
+    var st = slotState[segIdx];
+    if (st.pos > 0) { st.pos--; renderSentence(); renderControls(); }
   }
 
-  // Draw the sentence + arrows into the card
-  function render() {
-    outputEl.innerHTML = "";
+  // Clicking the badge of a duplicated category cycles the active slot
+  function cycleActive(cat) {
+    var idxs = slotsOfCategory(cat);
+    if (idxs.length < 2) return;
+    var pos = idxs.indexOf(activeSlotFor[cat]);
+    activeSlotFor[cat] = idxs[(pos + 1) % idxs.length];
+    renderControls();
+  }
+
+  function renderSentence() {
+    sentenceEl.innerHTML = "";
     currentFrame._segments.forEach(function (seg, i) {
       if (!seg.slot) {
-        var t = document.createElement("span");
-        t.className = "cm-text";
-        t.textContent = seg.text;
-        outputEl.appendChild(t);
-        return;
+        var t = document.createElement("span"); t.className = "cm-text"; t.textContent = seg.text;
+        sentenceEl.appendChild(t); return;
       }
-
-      var st = slotState[i];
-      var color = (data.categories[seg.slot] || {}).color || "#000";
-
-      var wrap = document.createElement("span");
-      wrap.className = "cm-slot";
-      wrap.style.color = color;
-
-      // Left arrow (disabled at start of history)
-      var left = document.createElement("span");
-      left.className = "cm-arrow" + (st.pos === 0 ? " cm-disabled" : "");
-      left.textContent = "\u2039"; // ‹
-      left.setAttribute("role", "button");
-      left.setAttribute("aria-label", "Previous " + seg.slot);
-      if (st.pos > 0) left.addEventListener("click", function () { stepBack(i); });
-
-      // The word itself
-      var word = document.createElement("span");
-      word.textContent = st.history[st.pos];
-
-      // Right arrow (new word)
-      var right = document.createElement("span");
-      right.className = "cm-arrow";
-      right.textContent = "\u203a"; // ›
-      right.setAttribute("role", "button");
-      right.setAttribute("aria-label", "New " + seg.slot);
-      right.addEventListener("click", function () { stepForward(i); });
-
-      wrap.appendChild(left);
-      wrap.appendChild(word);
-      wrap.appendChild(right);
-      outputEl.appendChild(wrap);
+      var color = (data.categories[seg.slot]||{}).color || "#000";
+      var w = document.createElement("span");
+      w.className = "cm-word"; w.style.color = color;
+      w.textContent = slotState[i].history[slotState[i].pos];
+      sentenceEl.appendChild(w);
     });
   }
 
-  function showError(msg) {
-    outputEl.innerHTML = "";
-    var box = document.createElement("div");
-    box.className = "cm-error";
-    box.textContent = msg;
-    outputEl.appendChild(box);
-    if (generateBtn) generateBtn.disabled = true;
+  function renderControls() {
+    controlsEl.innerHTML = "";
+    CATEGORY_ORDER.forEach(function (cat) {
+      var meta = data.categories[cat] || { label: cat, color: "#000" };
+      var idxs = slotsOfCategory(cat);
+      var active = activeSlotFor[cat];
+      var hasWord = active !== null && active !== undefined;
+      var isDup = idxs.length > 1;
+
+      var unit = document.createElement("div");
+      unit.className = "cm-control" + (hasWord ? "" : " cm-control-empty");
+
+      var word = document.createElement("div");
+      word.className = "cm-control-word";
+      word.style.color = meta.color;
+      word.textContent = hasWord ? slotState[active].history[slotState[active].pos] : "\u2014";
+      unit.appendChild(word);
+
+      var badge = document.createElement("div");
+      badge.className = "cm-badge" + (isDup ? " cm-badge-dup" : "");
+      badge.style.borderColor = meta.color;
+      badge.style.color = meta.color;
+      badge.textContent = meta.label;
+      if (isDup) {
+        badge.setAttribute("role", "button");
+        badge.setAttribute("tabindex", "0");
+        badge.title = "Click to switch between the two " + meta.label.toLowerCase() + "s";
+        badge.addEventListener("click", function () { cycleActive(cat); });
+        badge.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); cycleActive(cat); }
+        });
+      }
+      unit.appendChild(badge);
+
+      var arrows = document.createElement("div");
+      arrows.className = "cm-arrows";
+      var left = document.createElement("span");
+      left.className = "cm-arrow" + (hasWord && slotState[active].pos > 0 ? "" : " cm-disabled");
+      left.textContent = "\u2039";
+      if (hasWord && slotState[active].pos > 0) left.addEventListener("click", function(){ stepBack(active); });
+      var right = document.createElement("span");
+      right.className = "cm-arrow" + (hasWord ? "" : " cm-disabled");
+      right.textContent = "\u203a";
+      if (hasWord) right.addEventListener("click", function(){ stepForward(active); });
+      arrows.appendChild(left); arrows.appendChild(right);
+      unit.appendChild(arrows);
+
+      controlsEl.appendChild(unit);
+    });
   }
 })();
 </script>
