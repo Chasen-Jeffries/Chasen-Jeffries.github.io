@@ -686,3 +686,23 @@ audio {
   .cm-controls-row { gap: 16px; }
 }
 
+/* detailed instructions block */
+.cm-instructions {
+  max-width: 680px;
+  margin: 50px auto 0;
+  padding-top: 30px;
+  border-top: 4px solid #000;
+  color: #36454f;
+}
+.cm-instructions h3 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.cm-instructions ul {
+  padding-left: 22px;
+  line-height: 1.7;
+}
+.cm-instructions li {
+  margin-bottom: 8px;
+}
+
