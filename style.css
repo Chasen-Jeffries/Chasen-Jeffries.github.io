@@ -773,3 +773,265 @@ audio {
   padding-bottom: 0;
   margin-bottom: 0;
 }
+
+
+/* ===== Crossword Generator ===== */
+
+#Crossword {
+  padding: 40px 20px;
+  background-color: #F4F7FA;
+}
+
+#Crossword .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#cw-clock {
+  text-align: center;
+  font-size: 20px;
+  font-family: monospace;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+#cw-generate-btn {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 12px 32px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #111;
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#cw-generate-btn:hover {
+  background: #333;
+  border-color: #333;
+  animation: none;
+  box-shadow: none;
+}
+
+#cw-generate-btn:disabled {
+  background: #999;
+  border-color: #999;
+  cursor: not-allowed;
+}
+
+#cw-status {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 16px;
+  min-height: 28px;
+}
+
+#cw-grid-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+#cw-grid-container {
+  display: inline-block;
+  border: 2px solid #111;
+}
+
+.cw-grid-row {
+  display: flex;
+}
+
+.cw-cell {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: white;
+  user-select: none;
+}
+
+.cw-cell.black {
+  background: #111;
+  border-color: #111;
+  cursor: default;
+}
+
+.cw-cell.active-slot { background: #6bb8f0; }
+.cw-cell.active-cell { background: #1a73e8; }
+.cw-cell.wrong       { background: #ffd6d6; }
+.cw-cell.correct     { background: #d6f5d6; }
+
+.cw-clue-num {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  font-size: 9px;
+  line-height: 1;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.cw-letter {
+  font-size: 19px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #111;
+  text-transform: uppercase;
+}
+
+#cw-key {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.cw-key-btn {
+  padding: 10px 22px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid #111;
+  border-radius: 0;
+  background: white;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.cw-key-btn:hover {
+  background: #111;
+  color: white;
+  animation: none;
+  box-shadow: none;
+  border-color: #111;
+}
+
+.cw-key-btn:disabled {
+  border-color: #ccc;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.cw-key-btn:disabled:hover {
+  background: white;
+  color: #ccc;
+  border-color: #ccc;
+}
+
+#cw-clue-panel {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cw-clue-column {
+  flex: 1;
+  max-width: 440px;
+}
+
+.cw-clue-column h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #111;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+.cw-clue-list {
+  list-style: none;
+  font-size: 15px;
+  line-height: 2;
+  font-family: Arial, sans-serif;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.cw-clue-list li {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-bottom: 0;
+}
+
+.cw-clue-list li:hover  { background: #e8e8e8; }
+.cw-clue-list li.active-clue { background: #6bb8f0; }
+
+.cw-clue-list li span {
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+#cw-confirm-overlay,
+#cw-congrats-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+#cw-confirm-overlay.visible,
+#cw-congrats-overlay.visible {
+  display: flex;
+}
+
+#cw-confirm-box,
+#cw-congrats-box {
+  background: white;
+  padding: 32px 40px;
+  text-align: center;
+  border: 2px solid #111;
+}
+
+#cw-congrats-box h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#cw-confirm-box p,
+#cw-congrats-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#cw-confirm-box button,
+#cw-congrats-box button {
+  padding: 10px 28px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid #111;
+  border-radius: 0;
+  cursor: pointer;
+  margin: 0 8px;
+  background: white;
+  transition: background 0.2s, color 0.2s;
+}
+
+#cw-confirm-box button:hover,
+#cw-congrats-box button:hover {
+  background: #111;
+  color: white;
+  animation: none;
+  box-shadow: none;
+}
+
+
