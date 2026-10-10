@@ -12,7 +12,7 @@ const WordIndex = (() => {
     if (loaded.has(length)) return;
     if (length < 3 || length > 15) return;
 
-    const response = await fetch(`data/clues/clues_${length}.json`);
+    const response = await fetch(`crossword/data/clues/clues_${length}.json`);
     const clues    = await response.json();
 
     index[length] = {
