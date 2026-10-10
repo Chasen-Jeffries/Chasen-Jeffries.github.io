@@ -680,8 +680,54 @@
                               </div>
                 
             </div>
-    
-      </div>
+          </div>
+
+                            <div id="Crossword" class="content-region">
+                                <div style="text-align:center; padding: 30px 20px 0;">
+                                  <h1 style="letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Crossword</h1>
+                                  <div id="cw-clock">0:00</div>
+                                  <button id="cw-generate-btn" onclick="cwHandleGenerate()">Generate Puzzle</button>
+                                  <div id="cw-status"></div>
+                                </div>
+                              
+                                <div id="cw-grid-wrapper">
+                                  <div id="cw-grid-container"></div>
+                                </div>
+                              
+                                <div id="cw-key">
+                                  <button class="cw-key-btn" onclick="cwCheckPuzzle()"   id="cw-btn-check"         disabled>Check Puzzle</button>
+                                  <button class="cw-key-btn" onclick="cwGiveHint()"      id="cw-btn-hint"           disabled>Hint</button>
+                                  <button class="cw-key-btn" onclick="cwRevealLetter()"  id="cw-btn-reveal-letter"  disabled>Reveal Letter</button>
+                                  <button class="cw-key-btn" onclick="cwRevealWord()"    id="cw-btn-reveal-word"    disabled>Reveal Word</button>
+                                </div>
+                              
+                                <div id="cw-clue-panel">
+                                  <div class="cw-clue-column">
+                                    <h3>Across</h3>
+                                    <ul class="cw-clue-list" id="cw-across-list"></ul>
+                                  </div>
+                                  <div class="cw-clue-column">
+                                    <h3>Down</h3>
+                                    <ul class="cw-clue-list" id="cw-down-list"></ul>
+                                  </div>
+                                </div>
+                              
+                                <div id="cw-confirm-overlay">
+                                  <div id="cw-confirm-box">
+                                    <p>Are you sure you want to generate a new puzzle?</p>
+                                    <button onclick="cwConfirmGenerate(true)">Yes</button>
+                                    <button onclick="cwConfirmGenerate(false)">No</button>
+                                  </div>
+                                </div>
+                              
+                                <div id="cw-congrats-overlay">
+                                  <div id="cw-congrats-box">
+                                    <h2>Congratulations!</h2>
+                                    <p id="cw-congrats-time"></p>
+                                    <button onclick="cwCloseCongrats()">Close</button>
+                                  </div>
+                                </div>
+                              </div>
 
       
     <!-- Load additional JS scripts here -->
